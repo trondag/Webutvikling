@@ -50,12 +50,12 @@ nav p a:nth-child(even){
     background: #ff1a85;
 }
 
+/* Hovedkolonne */
 main {
     display: flex;
     flex-direction: column;
 }
 
-/* Hovedkolonne */
  main section{
     border-top: solid 10px #ff1a85;
     display: flex;
@@ -75,12 +75,12 @@ img{
 /*Sidekolonne*/
 aside{
     background: #ff1a85;
+    min-width: 300px;
 }
 
 aside h2 {
     color: white;
     font-family: 'EB Garamond', serif;
-    /*text-shadow: 1px 1px grey;*/
     margin-left: 5%;
     margin-bottom: 2px;
 }

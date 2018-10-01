@@ -9,6 +9,26 @@ body{
     font-family:sans-serif;
 }
 
+/*grid*/
+header {grid-area: header;}
+nav {grid-area: nav;}
+main {grid-area: main;}
+footer {grid-area: footer;}
+aside {grid-area: aside;}
+
+/* Hvis viewport er over 700 pc */
+@media (min-width: 700px) {
+    body{
+        display: grid;
+        grid-template-areas:
+            'header aside'
+            'nav aside'
+            'main aside'
+            'footer footer';
+        grid-column-gap: 5%;
+    }
+}
+
 /* Header */
 h1{
     color:#ff1a85;
@@ -53,6 +73,11 @@ img{
 
 .utenBorder{
     border: none;
+}
+
+aside{
+    background: #ff1a85;
+    min-width: 300px;
 }
 
 /* Footer */
