@@ -1,0 +1,14 @@
+div {
+    display: inline-block;
+    background-color: linen;
+    border: solid 2px black;
+    width: 250px;
+    padding: 20px;
+    margin: 5px;
+}
+
+.uthev {
+    color: orangered;
+    background-color: yellow;
+    font-weight: bold;
+}

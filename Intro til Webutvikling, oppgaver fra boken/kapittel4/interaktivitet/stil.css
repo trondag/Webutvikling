@@ -1,0 +1,28 @@
+body {
+    background-color: lightgrey;
+    font-family: sans-serif;
+}
+
+.knapp {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    background-color: darkgrey;
+    font-weight: bold;
+    border: solid 1px black;
+    cursor: pointer;
+}
+.knapp:hover {
+    background-color: lightyellow;
+}
+
+article {
+    display: none;
+}
+
+article:target {
+    display: initial;
+}

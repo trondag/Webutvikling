@@ -1,0 +1,36 @@
+body {
+    max-width: 800px;
+    margin: auto;
+    background-color: lightyellow;
+}
+
+.standardBoks {
+    border: solid 5px lightskyblue;
+    padding: 2%;
+    margin: 1%;
+    box-shadow: 2px 2px 4px #000000;
+    background-color: lightcyan;
+    border-radius: 15px;
+}
+
+nav p {
+    display: inline-block;
+    border: solid 3px navajowhite;
+    background-color: white;
+}
+
+main {
+    max-width: 46%;
+    max-height: 400px;
+    overflow: scroll;
+    float: left;
+}
+
+aside {
+    max-width: 35%;
+    float: right;
+}
+
+footer {
+    clear: both;
+}

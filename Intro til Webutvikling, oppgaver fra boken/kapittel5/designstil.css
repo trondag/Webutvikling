@@ -1,0 +1,35 @@
+#wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-style: solid;
+    border-color: red;
+}
+
+header {
+    border-style: solid;
+    flex-basis: 100%
+}
+
+nav {
+    border-style: solid;
+    flex-basis: 200px;
+}
+
+main {
+    border-style: solid;
+    flex-basis: 400px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-height: 200px;
+}
+
+aside {
+    border-style: solid;
+    flex-basis: 200px;
+}
+
+footer {
+    border-style: solid;
+    flex-basis: 100%;
+}

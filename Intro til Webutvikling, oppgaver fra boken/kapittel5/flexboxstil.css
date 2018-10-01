@@ -1,0 +1,31 @@
+#wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-style: solid;
+    border-color: red;
+}
+
+#boks1 {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 300px;
+    border-style: solid;
+    height: 50px;
+}
+
+#boks2 {
+    flex-grow: 3;
+    flex-shrink: 2;
+    flex-basis: 500px;
+    border-style: solid;
+    height: 50px;
+}
+
+#boks3 {
+    flex-grow: 8;
+    flex-shrink: 3;
+    flex-basis: 50px;
+    border-style: solid;
+    height: 50px;
+}

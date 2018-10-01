@@ -1,0 +1,12 @@
+.infoboks {
+    border-style: solid;
+    background-color: gray;
+}
+
+.uthevet {
+    font-weight: bolder;
+}
+
+.viktig {
+    text-decoration: underline;
+}

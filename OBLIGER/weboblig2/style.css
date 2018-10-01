@@ -1,0 +1,116 @@
+html{
+    background-image: url("bilder/bakgrunn.jpg")
+}
+
+body{
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 50px;
+    font-family:sans-serif
+}
+
+/*grid*/
+header {grid-area: header;}
+nav {grid-area: nav;}
+main {grid-area: main;}
+footer {grid-area: footer;}
+aside {grid-area: aside;}
+
+/* Hvis viewport er over 700 pc */
+@media (min-width: 700px) {
+    body{
+        display: grid;
+        grid-template-areas:
+            'header aside'
+            'nav aside'
+            'main aside'
+            'footer footer';
+        grid-column-gap: 5%;
+    }
+}
+
+/* Header */
+h1{
+    color:#ff1a85;
+    font-size: 4em;
+    font-family: 'EB Garamond', serif;
+}
+
+/* Meny*/
+nav p a{
+    background: #ff0066;
+    text-decoration: none;
+    color: white;
+    padding: 8px;
+    display: inline-block;
+    margin: 1px;
+}
+
+nav p a:nth-child(even){
+    background: #ff1a85;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hovedkolonne */
+ main section{
+    border-top: solid 10px #ff1a85;
+    display: flex;
+    
+}
+
+figure {
+    padding-right: 0;
+    margin-right: 0;
+    width: 80%;
+}
+
+img{
+    width: 100%;
+}
+
+/*Sidekolonne*/
+aside{
+    background: #ff1a85;
+}
+
+aside h2 {
+    color: white;
+    font-family: 'EB Garamond', serif;
+    /*text-shadow: 1px 1px grey;*/
+    margin-left: 5%;
+    margin-bottom: 2px;
+}
+
+aside iframe {
+    width: 100%
+}
+
+aside article a {
+    text-decoration: none;
+    color: white;
+    font-style: italic;
+    font-size: 110%;
+    margin-left: 10%;
+    border-top: solid white;
+    border-bottom: solid white;
+    padding: 0.5%
+}
+
+aside article a:hover {
+    border-left: solid white;
+    border-right: solid white;
+}
+
+/* Footer */
+footer {
+    height: 250px;
+    background-image: linear-gradient(#ff1a85, white);
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+}

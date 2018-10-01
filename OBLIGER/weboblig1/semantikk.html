@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Oppgave 5</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+	<body>
+		<header>
+            <h1>Webutvikling (Oblig 1)</h1>
+            <nav>
+                <a href="index.html">Oppgave 1</a>
+                <a href="artikkel.html">Oppgave 2</a>
+                <a href="innhold-vs-design.html">Oppgave 3</a>
+                <a href="webserver.html">Oppgave 4</a>
+                <a href="semantikk.html">Oppgave 5</a>
+                <a href="style.css">Oppgave 6 (stilark)</a>
+                <a href="box-modellen.html">Oppgave 7</a>
+            </nav>
+        </header>
+        <main>
+            <article>
+                <header><h2>Hva er semantikk?</h2></header>
+                <figure>
+                    <img src="semantikk.jpg" alt="Forklaring av ordet semantikk" />
+                    <figcaption>Semantikk er læren om språk med mening!</figcaption>
+                </figure>
+                <p><i>Denne oppgaven ble oppdatert 13.09.2018</i></p>
+                <p>Semantiske tagger er et nytt system i HTMLkoden som erstatter den gamle modellen med div/span tagger. De semantiske taggene kan
+                        markere områder i kodestrukturen, og da får områdene en større betydning for hva som finnes av innhold hva i nettsiden. 
+                        Dette gir mange fordeler, den kanskje største fordelen er i forbindelse med maskinell lesing. De vanligste semantiske taggene er &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;article&gt;, &lt;aside&gt; og &lt;footer&gt;.
+                        En søkemotor eller skjermleser kan dermed enkelt snappe opp det den er ute etter, om den vil ha tak i overskrift eller kontaktinformasjon for eksempel.
+                        I fremtiden kan vi kanskje også skrive ut bestemte deler av nettsiden, for eksempel hvis vi bare vil ha innholdet i en artikkel.</p>
+                <p>Jobben med å utvikle og designe nettsider er også blitt lettere med de semantiske taggene. Nå kan utviklere velge en semantisk tagg for å forandre alt under det attributtet med css. Vi
+                    vil fortsatt trenge &lt;div&gt; og &lt;span&gt;, men det sparer oss for litt jobb når vi slipper å ha så mange klasser og id'er å holde styr på.</p>
+                <ul>
+                    <li><b>Viktige semantiske tagger;</b></li>
+                        <ul>
+                            <li>&lt;header&gt;: Forteller hva som er overksrift. Denne kan gjerne brukes for hver overskrift t.o.m. for hver artikkel.</li>
+                            <li>&lt;nav&gt;: Forteller hva som er menyen/navigasjonen i nettsiden.</li>
+                            <li>&lt;main&gt;: Markerer feltet hvor vi finner selve innholdet i nettsiden.</li>
+                            <li>&lt;article&gt;: Brukes helst for hver artikkel.</li>
+                            <li>&lt;section&gt;: Brukes for å markere seksjoner, for eksempel en sportsseksjon.</li>
+                            <li>&lt;aside&gt;: Brukes ofte som en faktaboks på siden</li>
+                            <li>&lt;footer&gt;: Forteller at dette er footeren, der man ofte finner kontaktinfo.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </article>
+        </main>
+        <footer>
+            <p id="footer1">2018</p>
+            <p id="footer2">Trond Graabræk</p>
+            <p id="footer3">trondg@hiof.no</p>
+        </footer>
+    </body>
+</html>

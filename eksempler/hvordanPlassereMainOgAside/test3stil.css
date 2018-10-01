@@ -1,0 +1,29 @@
+* {
+    font-family: Arial, Helvetica, sans-serif
+}
+
+html  {
+    background-color: lightyellow;
+    margin: auto;
+    max-width: 800px;
+}
+
+.boks1 {
+    border: solid 5px red;
+    background-color: white;
+    text-align: center;
+}
+
+main {
+    max-width: 350px;
+    float: left;
+}
+
+aside {
+    display: inline-block;
+    height: 500px;
+}
+
+footer {
+    clear: both;
+}

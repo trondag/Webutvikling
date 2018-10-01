@@ -1,0 +1,66 @@
+html{
+    background-image: url("bilder/bakgrunn.jpg")
+}
+
+body{
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 50px;
+    font-family:sans-serif;
+}
+
+/* Header */
+h1{
+    color:#ff1a85;
+    font-size: 4em;
+    font-family: 'EB Garamond', serif;
+}
+
+/* Meny*/
+nav p a{
+    background: #ff0066;
+    text-decoration: none;
+    color: white;
+    padding: 8px;
+    display: inline-block;
+    margin: 1px;
+}
+
+nav p a:nth-child(even){
+    background: #ff1a85;
+}
+
+/* Hovedkolonne */
+ main article{
+    border-top: solid 10px #ff1a85;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+figure {
+    padding-right: 0;
+    margin-right: 0;
+    width: 50%;
+    min-width: 200px;
+}
+
+img{
+    width: 100%;
+    margin-top: 20px;
+    border: solid 1px grey;
+}
+
+.utenBorder{
+    border: none;
+}
+
+/* Footer */
+footer {
+    height: 250px;
+    background-image: linear-gradient(#ff1a85, white);
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+}
