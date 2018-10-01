@@ -59,6 +59,7 @@ main {
  main section{
     border-top: solid 10px #ff1a85;
     display: flex;
+    font-family: 'EB Garamond', serif;
     
 }
 
@@ -75,7 +76,7 @@ img{
 /*Sidekolonne*/
 aside{
     background: #ff1a85;
-    min-width: 300px;
+    width: 100%;
 }
 
 aside h2 {
