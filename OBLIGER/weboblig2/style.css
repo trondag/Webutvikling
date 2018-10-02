@@ -91,7 +91,7 @@ aside iframe {
     border: none;
 }
 
-aside section a {
+aside section p a {
     text-decoration: none;
     color: white;
     font-style: italic;
@@ -102,14 +102,23 @@ aside section a {
     padding: 0.5%
 }
 
-aside section a:hover {
+aside section p a:hover {
     border-left: solid white;
     border-right: solid white;
 }
 
+aside figure img {
+    width: 100%;
+    max-width: 200px;
+}
+
+aside figcaption {
+    color: white;
+}
+
 #googleKnapp {
     border: dotted 5px white;
-    line-height: 4em;
+    line-height: 6em;
     margin-left: 50px;
 }
 
@@ -126,4 +135,8 @@ footer {
     color: white;
     display: flex;
     justify-content: space-evenly;
+}
+
+footer p {
+    margin-top: 20px;
 }
