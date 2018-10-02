@@ -56,7 +56,49 @@
             </p>
             <h3>CSS Flexbox</h3>
             <p>
-                
+                Arbeidet med flexbox startet i 2008, og det ble implementert for fullt i 2015. Et stadig større krav etter responsivt design på
+                nettstedene med stadig større variasjon i skjermstørrelse krevde frem endringer. Poenget med flexbox er å fylle ut plassen
+                til et område/container/box uansett skjermstørrelse.
+            </p>
+            <figure>
+                <img src="bilder/flex-wrap.jpg" alt="Bilde av hvordan flex-wrap fungerer" />
+                <figcaption>Slik vil elementene falle til linjen under, når skjermbredden justeres</figcaption>
+            </figure>
+            <p>
+                I flexbox velger man et morelement som man gir egenskaper/attributter, og dette vil påvirke child-elementene i boksen. Her har
+                man man mulighet til å velge hvordan elementene skal wrappe hvis det blir trangt, hvordan de skal bevege seg i forhold til hverandre
+                samt om elementene skal endre størrelse.
+            </p>
+            <figure>
+                <img src="bilder/justify.jpg" alt="Viser forskjellige justify-content attributter" />
+                <figcaption>(Justify-content:) attributter</figcaption>
+            </figure>
+            <h3>CSS Grid</h3>
+            <p>
+                Min personlige favoritt Grid fikk støtte i de fleste nettlesere i oktober, 2017. Poenget med grid, er at vi 
+                nå har full kontroll over elementene i en nettside i mye større grad
+                enn floats osv..
+            </p>
+            <figure>
+                <img src="bilder/grid.jpg" alt="Illustrasjon av grid layout" />
+                <figcaption>Ligner på en tabell, her har har vi full kontroll!</figcaption>
+            </figure>
+            <p>
+                Med grid, lager vi en slags tabell som vi plasserer elementer i. Tabellen kan kodes på flere måter, en måte er grid-template-areas. (se bilde under)
+                Når vi har laget et grid for alle elementene våre, vil vi til enhver tid ha full
+                kontroll over hvor de havner, de kan nemlig ikke gå ut av plassen sin i grid systemet uten videre.
+            </p>
+            <figure>
+                <img src="bilder/grid-kode.jpg" alt="Illustrasjon av grid kode" />
+                <figcaption>Slik ser koden ut for grid-layouten til dette nettstedet. Hvis skjermbredden kommer under 700 pixler, forsvinner grid. (media-tag)</figcaption>
+            </figure>
+            <h3>Grid eller flexbox?</h3>
+            <p>
+                Hvis vi skal vite hva som er best i hvilken situasjon, må vi vite hvordan vi vil at elementene skal oppføre seg.
+                I et responsivt design der elementer skal flyte rundt på nettsiden pent og smidig, vil flexbox være
+                å foretrekke. På en annen side vil vi ikke ha like mye kontroll over elementene som vi har i grid. Grid
+                kan også fungere bra i responsivt design, da grid også kan settes til å scale med viewport. Et problemet
+                med grid er likevel at det ikke er støtta i Explorer eller Edge.
             </p>
             <p><a href="http://fantasai.inkedblade.net/weblog/2012/css-layout-evolution/">Jeg hentet mye informasjon fra denne..</a></p>
             <p><a href="https://www.w3.org/Style/CSS20/">..og denne siden!</a></p>
@@ -65,15 +107,20 @@
     <aside>
         <article>
             <h2>Floats & Clears</h2>
-            <iframe src="https://www.youtube.com/embed/xFGBNv2KeVU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/xFGBNv2KeVU" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </article>
         <article>
             <h2>Flexbox</h2>
-            <iframe src="https://www.youtube.com/embed/JJSoEo8JSnc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/JJSoEo8JSnc" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </article>
         <article>
             <h2>Grid</h2>
-            <iframe src="https://www.youtube.com/embed/jV8B24rSN5o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/jV8B24rSN5o" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </article>
+        <article>
+            <h2>Lenker</h2>
+            <p><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Flexbox Guide</a></p>
+            <p><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">Grid Guide</a></p>
         </article>
     </aside>
     <footer>

@@ -86,11 +86,31 @@ aside article{
     width: 100%;
 }
 
+aside iframe {
+    border: none;
+}
+
 aside h2 {
     color: white;
     font-family: 'EB Garamond', serif;
     margin-left: 5%;
     margin-bottom: 2px;
+}
+
+aside article a {
+    text-decoration: none;
+    color: white;
+    font-style: italic;
+    font-size: 110%;
+    margin-left: 10%;
+    border-top: solid white;
+    border-bottom: solid white;
+    padding: 0.5%
+}
+
+aside article a:hover {
+    border-left: solid white;
+    border-right: solid white;
 }
 
 /* Footer */

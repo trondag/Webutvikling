@@ -87,10 +87,11 @@ aside h2 {
 }
 
 aside iframe {
-    width: 100%
+    width: 100%;
+    border: none;
 }
 
-aside article a {
+aside section a {
     text-decoration: none;
     color: white;
     font-style: italic;
@@ -101,10 +102,21 @@ aside article a {
     padding: 0.5%
 }
 
-aside article a:hover {
+aside section a:hover {
     border-left: solid white;
     border-right: solid white;
 }
+
+#googleKnapp {
+    border: dotted 5px white;
+    line-height: 4em;
+    margin-left: 50px;
+}
+
+#googleKnapp:hover  {
+    border: solid 5px white;
+}
+
 
 /* Footer */
 footer {
