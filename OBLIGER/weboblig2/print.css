@@ -1,16 +1,21 @@
+/* ---PRINT ARK--- */
+/* Endrer til hvit bakgrunn */
 html {
-    background: red;
+    background: white;
     font-family: 'Times New Roman', Times, serif;
 }
 
+/* Vekk med tittel og meny */
 header h1, nav {
     display: none;
 }
 
+/* Litt mindre bilder */
 img {
     width: 50%;
 }
 
+/* Vekk med kantlinjer */
 main article {
     border: none;
 }
@@ -19,10 +24,12 @@ aside h2 {
     display: none;
 }
 
+/* Vekk med youtube */
 iframe {
     display: none;
 }
 
+/* Legger inn url etter linker */
 a:after{
     content:" (" attr(href) ") ";
     font-size:0.8em;

@@ -66,7 +66,7 @@ main {
 figure {
     padding-right: 0;
     margin-right: 0;
-    width: 80%;
+    min-width: 50%;
 }
 
 img{
@@ -135,8 +135,4 @@ footer {
     color: white;
     display: flex;
     justify-content: space-evenly;
-}
-
-footer p {
-    margin-top: 20px;
 }
