@@ -98,6 +98,7 @@ img{
 aside{
     background: #ff1a85;
     width: 100%;
+    padding-bottom: 20px;
 }
 
 aside h2 {
@@ -126,10 +127,6 @@ aside section p a {
 aside section p a:hover {
     border-left: solid white;
     border-right: solid white;
-}
-
-aside {
-    padding-bottom: 20px;
 }
 
 aside figure img {
