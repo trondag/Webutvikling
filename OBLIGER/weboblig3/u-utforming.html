@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styleartikkel.css" />
+    <link rel="stylesheet" href="print.css" media="print" />
+    <title>Trond G..</title>
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Trond G..</h1>
+    </header>
+    <nav>
+        <p>
+            <a href="index.html">Hjem</a>
+            <a href="git.html">GIT/Github</a>
+            <a href="media.html">Mediatyper</a>
+            <a href="layout.html">CSS Layouts</a>
+            <a href="responsiv.html">Responsivt design</a>
+            <a href="u-utforming.html">Universell utforming</a>
+            <a href="wamp.html">WAMP/MAMP</a>
+        </p>
+    </nav>
+    <main>
+        <article>
+            <header><h2>Universell utforming</h2></header>
+            <p>
+                I dagens samfunn stiller vi visse krav til borgerne. Ikke alle klarer å møte disse kravene, men takket være vår universelle utforming klarer de likevel i de fleste
+                tilfeller å møte disse utfordringene. Eksempelvis kan vi tenke på rullestolbrukere som kan bruke heis eller en vei rundt trappen. Dette gjelder også i aller høyeste grad
+                webdesign!
+            </p>
+            <p>
+                Unviersell utforming er ikke noe vi kan gjøre, det er noe vi må gjøre! På den ene siden er det lovpålagt å utforme nettsteder universelt, og vi bør følge WCAG 2.0
+                standarden. Difi.no har mange artikler som viser hvordan vi på best mulig vis lager nettsteder som følger norsk lov. På den andre siden bør vi
+                gjøre det for å nå ut til flest mulig! For det første har vi de med kroniske plager, nemlig blinde, svaksynte, folk med dårlig motorikk eksempelvis. For det andre
+                er det mange som får skader, for eksempel: Brekker en arm, øyeoperasjon osv. Så hvis vi driver en nettbutikk vil vi gå glipp av mange potensielle kunder
+                 hvis vi ikke tenker på universiell utforming. Sett bort i fra dette, bør uansett motivasjonen være at nettet skal være tilgjengelig for alle!
+            </p>
+            <p>Nedenfor skriver jeg opp ting vi bør teste på nettstedet vårt:</p>
+            <ul>
+                <li>Hvordan enkelt er det å navigere på nettstedet med bare tastatur?</li>
+                <li>Nettstedet er responsivt? Da må forstørring fungere like godt ved alle skjermbredder!</li>
+                <li>Er innholdet lesbart for en med dårlig syn eller fargeblindhet?</li>
+                <li>Er koden semantisk riktig, slik at skjermlesere forstår innholdet?</li>
+                <li>Skiller lenker seg godt nok ut fra vanlig tekst?</li>
+                <li>Har du husket alternativ bildetekst?</li>
+                <li>Har tekstfelt, nedtrekkslister synlig ledetekst?</li>
+                <li>Søkefunksjon er viktig! Test ut søkefraser selv!</li>
+                <li>Husk å gi siden en tittel!</li>
+                <li>Valider koden!</li>
+            </ul>
+            <h2>Testing</h2>
+            <p>
+                Jeg har nå testa og gjort endringer på dette nettstedet for å møte noen av kravene til WCAG 2.0 standarden.
+            </p>
+            <p>
+                Kontrastene jeg hadde på mitt websted var ikke bra nok fant jeg ut da jeg testet de i et program som heter <i>Color contrast analyser</i>.
+            </p>
+            <figure>
+                <a href="bilder/kontrast.jpg">
+                    <img src="bilder/kontrast.jpg" alt="For mye kontrast (Colour contrast alalyzer)">
+                </a>
+                <figcaption>Fail for large and regular text!</figcaption>
+            </figure>
+            <p>
+                Jeg måtte derfor finne nye farger:
+            </p>
+            <figure>
+                <a href="bilder/kontrast2.jpg">
+                    <img src="bilder/kontrast2.jpg" alt="Disse er ikke bra nok, men de fungerer!" />
+                </a>
+                <figcaption>Denne kombinasjonen er bra nok for stor tekst, dermed er det greit nok.</figcaption>
+            </figure>
+            <p>
+                Jeg har også prøvd litt forskjellige skjermlesere på siden. Installerte en skjermleser som heter NVDA, og den fungerte veldig bra, det var bare å hovre over det jeg ville få opplest.
+                Men skjermleseren var litt plagsom, da den ikke stoppa i det hele tatt, og fortsatte å mase i tide og utide. Jeg testa også windows sin som man aktiverer i instillinger, og den
+                oppfattet jeg som litt vanskeligere å bruke.
+            </p>
+            <figure>
+                <a href="bilder/skjermleser.jpg">
+                    <img src="bilder/skjermleser.jpg" alt="Screenshot av skjermleser" />
+                </a>
+                <figcaption>Uten at jeg testet windows sin skjermleser veldig mye, synes jeg at den var litt kronglete å bruke.</figcaption>
+            </figure>
+            <p>
+                Jeg prøvde også å bare bruke tastaturet på siden (TAB). Det første som jeg kom til med tab, var menyelementene, og det er det viktigste mener jeg. Videre gikk den til bilder i artiklene,
+                og senere til aside som har youtubevideoer og lenker.
+            </p>
+        </article>
+    </main>
+    <aside>
+        <article>
+            <h2>2 min om universell utforming</h2>
+            <iframe src="https://www.youtube.com/embed/zl53ownJU1c" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </article>
+        <article>
+            <h2>24 tips (anbefales å se)</h2>
+            <iframe src="https://www.youtube.com/embed/oNpPOnji5Gs" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </article>
+        <article>
+            <h2>Lenker</h2>
+            <p><a href="https://uu.difi.no/krav-og-regelverk/kom-i-gang/hvordan-teste-universell-utforming-av-ditt-nettsted#farger-og-kontrast">Difi.no (kontraster)</a></p>
+            <p><a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility">MDN - What is accessibility?</a></p>
+        </article>
+    </aside>
+    <footer>
+        <p>#Trond Graabræk</p>
+        <p>trondg.g@hiof.no</p>
+    </footer>
+</body>
+</html>

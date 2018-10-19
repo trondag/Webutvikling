@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Matoppskrifter</title>
+		<meta charset="utf-8" />
+			<script>
+				
+                window.onload = oppstart;
+
+                var data;
+
+                function oppstart(){
+                    //Lager en forespørsel variabel
+                    var request = new XMLHttpRequest();
+                    
+                    request.open('GET', 'https://app.ticketmaster.com/discovery/v2/events.json?apikey=sIhCKgpPqRFAsAzAzsWtjaOoC9rMJAeC&city=oslo', true);
+                    
+                    request.onload = function () {
+                        
+                        data = JSON.parse(this.response);
+                        console.log(data);
+                    }
+                    request.send();
+                    
+                    
+                    /*
+                    fetch('https://app.ticketmaster.com/discovery/v2/events.json?apikey=sIhCKgpPqRFAsAzAzsWtjaOoC9rMJAeC&city=oslo')
+                    .then(function(data){
+                    console.log(data);
+                    }*/
+                    
+                }
+			</script>
+			
+	</head>
+	<body>
+		<header>
+            <h1>Oppskrifter</h1>
+        </header>
+        <aside>
+            <section>
+            </section>
+        </aside>
+        <main>
+
+        </main>
+        <footer>
+
+        </footer>
+	</body>
+</html>
