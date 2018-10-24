@@ -19,11 +19,11 @@ body {
     width:45px;
 }
 article h2 {grid-area: header;}
-article p:first-child {grid-area: dato;}
-article p:last-child {grid-area: genre;}
+.datoClass {grid-area: dato;}
+.genreClass {grid-area: genre;}
 .eventIkon {grid-area: ikon;}
-.pris {grid-area: pris;}
-.info {grid-area: info;}
+.prisClass {grid-area: pris;}
+.infoClass {grid-area: info;}
 aside {grid-area: aside;}
 
 article{
@@ -31,13 +31,13 @@ article{
     grid-template-areas: 
         'header header header'
         'dato dato aside'
-        'genre ikon aside'
+        'genre genre aside'
         'pris info aside';
     
 }
 
-main img{
-    display: inline-block;
+.eventIkon {
+    height: 2.3em;
 }
 
 

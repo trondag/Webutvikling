@@ -83,6 +83,7 @@
                 function visDato(data, artikkelId){
                     var dato = document.createElement("p");
                     var p = document.createTextNode(data);
+                    dato.className = "datoClass"
                     dato.appendChild(p);
                     document.getElementById(artikkelId).appendChild(dato);
                 }
@@ -90,6 +91,7 @@
                 function visIkon(data, artikkelId){
                     var genre = document.createElement("p");
                     var p = document.createTextNode(data);
+                    genre.className = "genreClass";
                     genre.appendChild(p);
                     document.getElementById(artikkelId).appendChild(genre);
                     data = data.toLowerCase();
@@ -98,7 +100,7 @@
                         data = "hip-hop";
                     }
                     ikon.src = "bilder/ikoner/" + data + ".png";
-                    ikon.className = "eventIkon";
+                    ikon.className = "genreClass";
 
                     document.getElementById(artikkelId).appendChild(ikon);
                 }
@@ -106,6 +108,7 @@
                 function visPris(minstePris, valuta, artikkelId){
                     var pris = document.createElement("p");
                     var innhold = document.createTextNode("Fra " + minstePris + " " + valuta);
+                    pris.className = "prisClass"
                     pris.appendChild(innhold);
                     document.getElementById(artikkelId).appendChild(pris);
                 }
@@ -113,6 +116,7 @@
                 function visInfo(link, artikkelId){
                     var aLink = document.createElement("a");
                     var innhold = document.createTextNode("Mer info")
+                    aLink.className = "infoClass";
                     aLink.appendChild(innhold);
                     aLink.href = link;
                     document.getElementById(artikkelId).appendChild(aLink)
