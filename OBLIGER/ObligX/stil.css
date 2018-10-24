@@ -1,0 +1,69 @@
+/* FONTER
+font-family: 'Mali', cursive;
+font-family: 'Monoton', cursive;
+font-family: 'Luckiest Guy', cursive;
+font-family: 'Notable', sans-serif;
+font-family: 'Fugaz One', cursive;
+*/
+nav {
+    font-family: 'Mali', cursive;
+}
+
+body {
+    background-image: url(bilder/bakgrunn.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.ikon {
+    width:45px;
+}
+article h2 {grid-area: header;}
+article p:first-child {grid-area: dato;}
+article p:last-child {grid-area: genre;}
+.eventIkon {grid-area: ikon;}
+.pris {grid-area: pris;}
+.info {grid-area: info;}
+aside {grid-area: aside;}
+
+article{
+    display: grid;
+    grid-template-areas: 
+        'header header header'
+        'dato dato aside'
+        'genre ikon aside'
+        'pris info aside';
+    
+}
+
+main img{
+    display: inline-block;
+}
+
+
+h1{
+    text-align: center;
+    font-family: 'Notable', sans-serif;
+    font-size: 2.5em;
+    transition: 2s;
+}
+
+h1:hover {
+    font-size: 3em;
+    transition: 2s;
+    color: rgb(71, 219, 175);
+    text-shadow: 2px 2px 8px lightgray;
+
+}
+
+p, h2 {
+    font-family: 'Fugaz One', cursive;
+}
+
+a {
+    font-family: 'Fugaz One', cursive;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+

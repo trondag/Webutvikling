@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Matoppskrifter</title>
+    <head>
+        <title>SUP Oslo..?</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="stil.css" />
+        <link href="https://fonts.googleapis.com/css?family=Fugaz+One|Luckiest+Guy|Mali|Monoton|Notable" rel="stylesheet">
 			<script>
 				
                 window.onload = oppstart;
@@ -17,31 +21,130 @@
                     
                     request.onload = function () {
                         
+                        //data er objektet med all informasjonen om events
+                        //JSON.parse tolker json data og gjør det om til et JavaScript objekt!
                         data = JSON.parse(this.response);
-                        console.log(data);
-                    }
-                    request.send();
-                    
-                    
-                    /*
-                    fetch('https://app.ticketmaster.com/discovery/v2/events.json?apikey=sIhCKgpPqRFAsAzAzsWtjaOoC9rMJAeC&city=oslo')
-                    .then(function(data){
+
                     console.log(data);
-                    }*/
+                        
+                        var utskrift = document.getElementById("event-boks").innerHTML;
+
+                        for (var i = 0 ; i < 15 ; i++){
+                            var idTilArtikkel = "artikkel" + i;
+                            lagArticle(i);
+                            visH2(data._embedded.events[i].name, idTilArtikkel);
+                            visDato(data._embedded.events[i].dates.start.localDate, idTilArtikkel);
+                            visIkon(data._embedded.events[i].classifications[0].genre.name, idTilArtikkel);
+                            visPris(data._embedded.events[i].priceRanges[1].min, data._embedded.events[i].priceRanges[1].currency, idTilArtikkel);
+                            visInfo(data._embedded.events[i].url, idTilArtikkel);
+                            //visBilde(data._embedded.events[i]);
+                        }
+
+                        //Hvorfor må dette stå i samme funksjon, går det ikke ann å ta ut json objekter???
+                        
+                    }
+
+                    request.send();
+
+                    skjulMeny();
+
+
+                }
+
+                function visMeny(){
+
+                    document.getElementById("menyKnapp").onclick = skjulMeny;
+                    document.getElementById("menyElementer").style.display = "block";
+                    document.getElementById("menyKnapp").src="bilder/ikoner/kryss.png";
+                }
+
+                function skjulMeny(){
+
+                    document.getElementById("menyKnapp").onclick = visMeny;
+                    document.getElementById("menyElementer").style.display = "none";
+                    document.getElementById("menyKnapp").src="bilder/ikoner/menyikon.png";
+                }
+
+                function lagArticle(artikkelNummer){
+
+                    var article = document.createElement("article");
+                    article.id = "artikkel" + artikkelNummer;
+                    document.getElementById("event-boks").appendChild(article)
+                }
+
+                function visH2(data, artikkelId){
+                    var overskrift = document.createElement("h2");
+                    var h2 = document.createTextNode(data);
+                    overskrift.appendChild(h2);
+                    document.getElementById(artikkelId).appendChild(overskrift);
                     
+                }
+
+                function visDato(data, artikkelId){
+                    var dato = document.createElement("p");
+                    var p = document.createTextNode(data);
+                    dato.appendChild(p);
+                    document.getElementById(artikkelId).appendChild(dato);
+                }
+
+                function visIkon(data, artikkelId){
+                    var genre = document.createElement("p");
+                    var p = document.createTextNode(data);
+                    genre.appendChild(p);
+                    document.getElementById(artikkelId).appendChild(genre);
+                    data = data.toLowerCase();
+                    var ikon = document.createElement("img");
+                    if(data === "hip-hop/rap"){
+                        data = "hip-hop";
+                    }
+                    ikon.src = "bilder/ikoner/" + data + ".png";
+                    ikon.className = "eventIkon";
+
+                    document.getElementById(artikkelId).appendChild(ikon);
+                }
+
+                function visPris(minstePris, valuta, artikkelId){
+                    var pris = document.createElement("p");
+                    var innhold = document.createTextNode("Fra " + minstePris + " " + valuta);
+                    pris.appendChild(innhold);
+                    document.getElementById(artikkelId).appendChild(pris);
+                }
+
+                function visInfo(link, artikkelId){
+                    var aLink = document.createElement("a");
+                    var innhold = document.createTextNode("Mer info")
+                    aLink.appendChild(innhold);
+                    aLink.href = link;
+                    document.getElementById(artikkelId).appendChild(aLink)
+                }
+
+                function visBilde(data){
+                    var img = document.createElement("img");
+                    img.src = data.images[0].url;
+                    
+                    document.getElementById("event-boks").appendChild(img);
+                    
+
+
                 }
 			</script>
 			
 	</head>
 	<body>
+        <nav>
+            <p>
+                <img class="ikon" id="menyKnapp" src="bilder/ikoner/menyikon.png" alt="Hamburger meny ikon" />Meny
+            </p>
+        </nav>
+        <nav id="menyElementer">
+            <p><a href="http://itstud.hiof.no/~trondg/studiewebsted/">Trond</a></p>
+            <p><a href="http://itstud.hiof.no/~trondg/web/weboblig3/">Webutvikling</a></p>
+            <p><a href="http://itstud.hiof.no/~trondg/infprog_obliger/">Infprog</a></p>
+        </nav>
 		<header>
-            <h1>Oppskrifter</h1>
+            <h1>SUP Oslo..?</h1>
         </header>
-        <aside>
-            <section>
-            </section>
-        </aside>
-        <main>
+        <main id="event-boks">
 
         </main>
         <footer>

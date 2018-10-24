@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styleartikkel.css" />
+    <link rel="stylesheet" href="print.css" media="print" />
+    <title>Trond G..</title>
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Trond G..</h1>
+    </header>
+    <nav>
+        <a href="index.html">Hjem</a>
+        <a href="git.html">GIT/Github</a>
+        <a href="media.html">Mediatyper</a>
+        <a href="layout.html">CSS Layouts</a>
+        <a href="responsiv.html">Responsivt design</a>
+        <a href="u-utforming.html">Universell utforming</a>
+        <a href="wamp.html">WAMP/MAMP</a>
+        <a href="wordpress.html">Inst. av Wordpress</a>
+    </nav>
+    <main>
+        <article>
+            <header><h2>Responsivt design</h2></header>
+            <p>
+                Selve essensen med responsivt design er at nettsteder og webløsninger
+                skal fungere like godt på en liten mobil fra Kina, som på en stor 4k skjerm.
+                Vi har i tillegg andre forutsetninger som båndbredde og dårlig mobilt internett.
+            </p>
+            <p>
+                Det er mange måter å bygge et responsivt nettsted på, vi kan for eksempel bruke
+                media-queries (min personlige favoritt), mediatyper(noe utdatert), eller flexbox
+                (Også et kjekt virkemiddel for responsivhet). Det er lurest å bygge nettsteder 
+                for små skjermer først, slik at vi senere enkelt kan tilpasse de til større 
+                skjermer. (Det er verre å ga andre veien.) Vi bør uansett ha en klar plan for hvordan
+                siden skal se ut på forskjellige enheter.
+            </p>
+            <h2>Media-typer</h2>
+            <p>
+                Vi har i dag bruk for flere egenskaper som media-typer gir oss. Det er veldig kjekt
+                hvis vi skal lage et eget stilark for print, da vi kan ta vekk mye unødvendig innhold
+                fra siden, slik at brukeren får en flott utskrift med hvit bakgrunn.
+            </p>
+            <p>
+                Utfordringene med mediatyper, og noe av grunnen til at en del av det skal fjernes
+                snart, er at måten man lager responsivhet med det er utdatert. Hvis vi velger at
+                et stilark skal gjelde for mobil, så gjelder det stilarket for alle mobiler.
+                Den skiller ikke på om du bruker en liten Iphone eller en Galaxy Note, dermed
+                kan det hende at innholdet blir rart på en stor skjerm kontra en liten.
+            </p>
+            <figure>
+                <a href="bilder/utskrift.jpg">
+                    <img src="bilder/utskrift.jpg" alt="Forhåndsvisning av en utskrift">
+                </a>
+                <figcaption>Med @media print{} kan man få flotte og elegante utskrifter.</figcaption>
+            </figure>
+            <h2>Media Queries</h2>
+            <p>
+                Jeg var inne på at media typer begrenset seg litt ang. responsivhet på forskjellige
+                skjermstørrelser for ulike modeller av enheter. Det flotte med media queries er at vi
+                ikke trenger å tenke på hva slags enhet som blir brukt! Nå tenker vi heller på hva
+                som er skjermbredden. Og det er mye smartere, fordi dagens utvalg av enheter har et vidt spenn
+                i skjermstørrelser.
+            </p>
+            <p>
+                Siden du leser nå er laget med mediaqueries for å få den til å fungere like godt
+                på alt. Det er veldig enkelt å lage mediaqueries, alt vi trenger å gjøre er å
+                bestemme når (hvilken skjermbredde) noe skal skje, og da kan vi for eksempel
+                legge til grid hvis skjermen er bredere enn 700pc som jeg har gjort.
+            </p>
+            <figure>
+                <a href="bilder/queries.jpg">
+                    <img src="bilder/queries.jpg" alt="Media queries brukt i en kodeeditor for responsivhet" />
+                </a>
+                <figcaption>Så enkelt er det faktisk!</figcaption>
+            </figure>
+            <h2>Fleksible størrelser</h2>
+            <p>
+                Hvis vi skal lage et responsivt nettsted finnes det mange måter å gjøre dette på. Flexbox er
+                et godt alternativ for å strukturere webstedet, da grid "tabellen" er fleksibel. Innhold, som
+                bokser eller tekst kan vi også bruke flexbox på, da elementene fint kan flyte rundt og bytte
+                plassering hvis vi forandrer viewport.
+            </p>
+            <p>
+                For å plassere elementer, og justere bildestørrelse, overskrift osv, må vi bruke måleenheter.
+                Nedenfor har jeg skrevet opp noen måleenheter (units). Når vi skal lage responsivt, bør
+                vi helst bruke de relative.
+                <ul>
+                    <li>px (pixler): Denne måleenheter teller pixler, og justerer seg etter det. Dermed ikke relativ!</li>
+                    <li>cm, in m.fl.: Også en absolutt måleenhet, ikke så mye brukt.</li>
+                    <li><b>em: Relativ i forhold til fint-size til morelement.</b></li>
+                    <li><b>vw: prosentvis relativ i forhold til viewport-width.</b></li>
+                    <li><b>%: Relativ til morelement.</b> (Personlige favoritt)</li>
+                </ul>
+        </article>
+    </main>
+    <aside>
+        <article>
+            <h2>Media Queries</h2>
+            <iframe src="https://www.youtube.com/embed/2KL-z9A56SQ" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </article>
+        <article>
+            <h2>Lenker</h2>
+            <p><a href="https://www.w3.org/TR/CSS21/media.html#media-types">w3.org (media typer)</a></p>
+            <p><a href="https://www.w3schools.com/cssref/css_units.asp">W3schools (units)</a></p>
+        </article>
+    </aside>
+    <footer>
+        <p>#Trond Graabræk</p>
+        <p>trondg.g@hiof.no</p>
+    </footer>
+</body>
+</html>

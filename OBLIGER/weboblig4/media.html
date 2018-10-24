@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styleartikkel.css" />
+    <link rel="stylesheet" href="print.css" media="print" />
+    <title>Trond G..</title>
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Trond G..</h1>
+    </header>
+    <nav>
+        <a href="index.html">Hjem</a>
+        <a href="git.html">GIT/Github</a>
+        <a href="media.html">Mediatyper</a>
+        <a href="layout.html">CSS Layouts</a>
+        <a href="responsiv.html">Responsivt design</a>
+        <a href="u-utforming.html">Universell utforming</a>
+        <a href="wamp.html">WAMP/MAMP</a>
+        <a href="wordpress.html">Inst. av Wordpress</a>
+    </nav>
+    <main>
+        <article>
+            <header><h2>Mediatyper</h2></header>
+                <p>Samtidig med at websider nå vises på små og store skjermer, trenger vi enkle metoder for utforming.</p>
+                <p>Med mediatyper kan vi velge egne stilark for forskjellige typer medium. Vi kan lage enklere utskrifter, tilpasse til mobiler, fremvisninger eller tilpasning til svaksynte.</p>
+                <p>Vi kan linke til disse i både HTML-dokumentet og CSS-dokumentet. Hvis vi skal ha egenskaper for når viewport blir større enn 700 pixler, kan vi sette <i>@media (min-width: 700px)</i> i stilarket.</p>
+                <p>Hvis vi skal ha egne stilark for hver versjon, kan vi linke til de i HTML dokumentet (i head).<i>(&lt;link rel="stylesheet" type="text/css" media="print" href="print.css"&gt;)</i></p>
+                <h3>Fordeler</h3>
+                <ul>
+                    <li>Det blir veldig mye enklere for utviklere, selv synes jeg dette var en enkel metode for å tilpasse små skjermer.</li>
+                    <li>Man kan spare brukeren for litt penger ved å lage enkle versjoner til utskrift så han/hun slipper å bruke så mye penger på blekk/toner.</li>
+                    <li>Svaksynte kan enkelt få lest opp innholdet i websiden.</li>
+                </ul>
+                <h3>Ulemper</h3>
+                <ul>
+                    <li>Ikke alle nettlesere støtter alle typer media tagger, noen mediatagger er utdaterte.</li>
+                    <li>Som regel vi mer data bli lastet ned, noe som er et problem for de som har dårlig båndbredde.</li>
+                </ul>
+            <figure>
+                <img class="utenBorder" src="bilder/alfakroll2.jpg" alt="bilde av en alfrakrøll"/>
+            </figure>
+        </article>
+    </main>
+    <aside>
+        <article>
+            <h2>Lenker</h2>
+            <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">MDN - MediaQueries</a></p>
+            <p><a href="https://www.w3schools.com/css/css3_mediaqueries.asp">W3Schools - MediaQueries</a></p>
+        </article>
+    </aside>
+    <footer>
+        <p>#Trond Graabræk</p>
+        <p>trondg.g@hiof.no</p>
+    </footer>
+</body>
+</html>
