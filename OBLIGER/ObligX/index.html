@@ -29,15 +29,16 @@
                         
                         var utskrift = document.getElementById("event-boks").innerHTML;
 
-                        for (var i = 0 ; i < 15 ; i++){
+                        for (var i = 0 ; i < 20 ; i++){
                             var idTilArtikkel = "artikkel" + i;
+                            var idTilGenre = "p" + i;
                             lagArticle(i);
                             visH2(data._embedded.events[i].name, idTilArtikkel);
                             visDato(data._embedded.events[i].dates.start.localDate, idTilArtikkel);
-                            visIkon(data._embedded.events[i].classifications[0].genre.name, idTilArtikkel);
+                            visIkon(data._embedded.events[i].classifications[0].genre.name, idTilArtikkel, idTilGenre);
                             visPris(data._embedded.events[i].priceRanges[1].min, data._embedded.events[i].priceRanges[1].currency, idTilArtikkel);
                             visInfo(data._embedded.events[i].url, idTilArtikkel);
-                            //visBilde(data._embedded.events[i]);
+                            visBilde(data._embedded.events[i], idTilArtikkel);
                         }
 
                         //Hvorfor må dette stå i samme funksjon, går det ikke ann å ta ut json objekter???
@@ -88,10 +89,11 @@
                     document.getElementById(artikkelId).appendChild(dato);
                 }
 
-                function visIkon(data, artikkelId){
+                function visIkon(data, artikkelId, pId){
                     var genre = document.createElement("p");
                     var p = document.createTextNode(data);
                     genre.className = "genreClass";
+                    genre.id = pId;
                     genre.appendChild(p);
                     document.getElementById(artikkelId).appendChild(genre);
                     data = data.toLowerCase();
@@ -102,7 +104,7 @@
                     ikon.src = "bilder/ikoner/" + data + ".png";
                     ikon.className = "genreClass";
 
-                    document.getElementById(artikkelId).appendChild(ikon);
+                    document.getElementById(pId).appendChild(ikon);
                 }
 
                 function visPris(minstePris, valuta, artikkelId){
@@ -115,18 +117,19 @@
 
                 function visInfo(link, artikkelId){
                     var aLink = document.createElement("a");
-                    var innhold = document.createTextNode("Mer info")
+                    var innhold = document.createTextNode("Billetter")
                     aLink.className = "infoClass";
                     aLink.appendChild(innhold);
                     aLink.href = link;
                     document.getElementById(artikkelId).appendChild(aLink)
                 }
 
-                function visBilde(data){
+                function visBilde(data, artikkelId){
                     var img = document.createElement("img");
                     img.src = data.images[0].url;
+                    img.className = "bildeClass";
                     
-                    document.getElementById("event-boks").appendChild(img);
+                    document.getElementById(artikkelId).appendChild(img);
                     
 
 

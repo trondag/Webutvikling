@@ -9,35 +9,51 @@ nav {
     font-family: 'Mali', cursive;
 }
 
-body {
+/*body {
     background-image: url(bilder/bakgrunn.png);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+}*/
+
+p img {
+    height: 2em;
+    position: relative;
+    top: 8px;
 }
-.ikon {
-    width:45px;
-}
+
 article h2 {grid-area: header;}
 .datoClass {grid-area: dato;}
 .genreClass {grid-area: genre;}
 .eventIkon {grid-area: ikon;}
 .prisClass {grid-area: pris;}
 .infoClass {grid-area: info;}
+.bildeClass {grid-area: bilde;}
 aside {grid-area: aside;}
 
 article{
     display: grid;
+    padding: 5px;
     grid-template-areas: 
         'header header header'
-        'dato dato aside'
-        'genre genre aside'
-        'pris info aside';
+        'dato dato bilde'
+        'genre ikon bilde'
+        'pris ingenting info';
+    border-top: 3px solid rgb(71, 219, 175);
     
+}
+
+main {
+    max-width: 370px;
+    margin: 0 auto;
 }
 
 .eventIkon {
     height: 2.3em;
+}
+
+.infoClass {
+    text-align: center;
 }
 
 
@@ -64,6 +80,54 @@ a {
     font-family: 'Fugaz One', cursive;
     margin-top: auto;
     margin-bottom: auto;
+    text-decoration: none;
+    color: black;
+    background-color: rgb(71, 219, 175);
+    border-radius: 4px;
+    max-width: 165px;
+    text-align: center;
+    transition: 2s;
 }
 
+a:hover {
+    transition: 500ms;
+    padding: 5px;
+}
 
+.bildeClass {
+    width: 10em;
+    border: 3px solid rgb(71, 219, 175);
+    border-radius: 4px;
+}
+
+@media only screen and (min-width: 550px){
+    main {
+        max-width: none;
+    }
+    
+    article{
+        display: grid;
+        grid-template-columns: 185px;
+        grid-template-areas:
+            'header bilde'
+            'dato bilde'
+            'genre bilde'
+            'pris bilde'
+            'info bilde';
+    }
+
+    .bildeClass {
+        width: 100%;
+        max-width: 500px;
+        max-height: 300px;
+        align-self: center;
+        transition: all 2s;
+    }
+
+    .bildeClass:hover {
+        transform: rotate(-15deg);
+        max-width: 600px;
+    }
+}
+
+@media only screen and (min-width:)
