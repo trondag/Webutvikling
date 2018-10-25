@@ -23,124 +23,85 @@
         <a href="u-utforming.html">Universell utforming</a>
         <a href="wamp.html">WAMP/MAMP</a>
         <a href="wordpress.html">Inst. av Wordpress</a>
+        <a href="wptest.html">Test av Wordpress</a>
+        <a href="cms.html">CMS systemer</a>
     </nav>
     <main>
         <article>
-            <header><h2>Hvordan installere Wordpress på WAMP?</h2></header>
+            <h2>CMS (Content Management System)</h2>
             <p>
-                Vi skal nå sette opp Wordpress på vår egen virtuelle webserver (som kjører lokalt på WAMP).
+                Det å skrive tonnevis med artikler og blogginnlegg som html kode i en kodeeditor kan være veldig mye jobb. Dette er mye
+                av grunnen til at vi har CMS systemer. I et slikt system vil det ofte være en admin som kan CMS systemet og vet hvordan det fungerer.
+                Den som er admin har gjerne satt opp og utformet nettstedet. En bruker/blogger/journalist/forfatter osv. vil ikke ha noe å gjøre
+                med oppsettet og designet, men kan enkelt publisere nye artikler til nettstedet i et forenklet miljø. Vi kan skille mellom innholdet
+                 som forfatteren bruker (database), funksjonaliteten som en admin ordner med (backend) og designet, som ofte er frontend og
+                 enkelt å holde på med.
             </p>
             <figure>
-                <img src="bilder/wpsteg1.jpg" alt="Illustrasjonsbilde" />
-                <figcaption>
-                    Venstreklikk på WAMP logoen nede på oppgavelinjen, og trykk 
-                    så på phpMyAdmin (som er server programvaren vi skal bruke).
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="bilder/wpsteg2.jpg" alt="Illustrasjonsbilde" />
-                <figcaption>
-                    Default brukernavn er root, og ikke noe passord.
-                </figcaption>
-            </figure>
-            <figure>
-                <a href="bilder/wpsteg3.jpg">
-                    <img src="bilder/wpsteg3.jpg" alt="Illustrasjonsbilde" />
-                </a>
-                <figcaption>
-                    Trykk på databaser.
-                </figcaption>
-            </figure>
-            <figure>
-                <a href="bilder/wpsteg4.jpg">
-                    <img src="bilder/wpsteg4.jpg" alt="Illustrasjonsbilde" />
-                </a>
-                <figcaption>
-                    Her skal du sette opp databasen til serveren(der filene er 
-                    lagret). Kall den gjerne test_db, og gjerne utf8.
-                </figcaption>
+                <img src="bilder/wordpress.png" alt="Illustrasjon av wordpress" />
+                <figcaption>Den ubestridte kongen av CMS (Wordpress)</figcaption>
             </figure>
             <p>
-                Da har vi satt opp WAMP server med phpMyAdmin. Det neste vi må gjøre,
-                er å installere Wordpress på serveren. Første steg; last ned programvaren!
-            <figure>
-                <img src="bilder/wpsteg5.jpg" alt="Illustrasjonsbilde" />
-                <figcaption>
-                    Last ned.
-                </figcaption>
-            </figure>
-            <figure>
-                <a href="bilder/wpsteg6.jpg">
-                    <img src="bilder/wpsteg6.jpg" alt="Illustrasjonsbilde" />
-                </a>
-                <figcaption>
-                    Pakk ut den zippede mappen, og legg mappen inn i windows/wamp64/www
-                </figcaption>
-            </figure>
+                CMS er veldig populært. Wordpress alene brukes på 32% av verdens internett, og det finnes et han av andre
+                også. Vi kan dele disse inn i open source og proprietære, og de har gjerne sine egne bruksområder som de selv er gode
+                på. Mange CMS systemer gir deg også muligheten til å installere utvidelser/plugins/widgets slik at vi kan skille oss fra andre.
+            </p>
+            <p>Populære open source (gratis):</p>
+            <ul>
+                <li>Wordpress</li>
+                <li>Joomla</li>
+                <li>Drupal</li>
+                <li>Grav</li>
+            </ul>
+            <p>Populære proprietære:</p>
+            <ul>
+                <li>Squarespace</li>
+                <li>Wix</li>
+                <li>Expression engine</li>
+                <li>Sharepoint</li>
+            </ul>
+            <p>Spesielle CMS:</p>
+            <ul>
+                <li>Wikipedia</li>
+                <li>Bolt(blogg)</li>
+                <li>eFileCabinet(dokumenthåndtering)</li>
+                <li>Moodle(LMS)</li>
+                <li>Ribbl(sosialt)</li>
+            </ul>
+            <h2>Fordeler og ulemper</h2>
             <p>
-                Det er <b>viktig</b> at du får lagt mappen inn i www i mappen til wamp64!
+                <b>Jeg tar først fordeler og ulemper med å bruke CMS systemer fra en utviklers ståsted.</b> En stor fordel er at på et stort system
+                der mange er involverte (eks. en nyhetsside) vil ikke brukere få tilgang til å endre backend og frontend, dermed har man større
+                kontroll. En annen fordel er at systemene som regel er veldig enkle, jeg selv satte opp en "fungerende" nettbutikk på wordpress i løpet
+                av to timer. Den store haken med det, er at man ikke har så mye kontroll med funksjonaliteten. Hvis man skal endre backend her, må man ha stor
+                kunnskap over selve systemet. På en annen side er det enkle oppsettet fantastisk for en utvikler som ikke kan programmere javascript, all funksjonaliteten
+                kan man få ved å installere ulike plugins og utvidelser. Men her kan det også bli for mye av det gode, ved å ha for mange plugins, kan de fort "krasje" 
+                med hverandre. Det er derfor lurt å ha kunnskap om hva de forskjellige CMS systemene er "gode" på før man bestemmer seg. Skal du ha en nettbutikk
+                bør du kanskje revurdere om du skal bruke wordpress, da det garantert finnes bedre systemer for dette.
             </p>
             <figure>
-                <a href="bilder/wpsteg7.jpg">
-                    <img src="bilder/wpsteg7.jpg" alt="Illustrasjonsbilde" />
-                </a>
-                <figcaption>
-                    
-                </figcaption>
+                <img src="bilder/cms-logoer.png" alt="Forskellige CMS leverandører" />
+                <figcaption>Noen av de mest populære cms systemene, (jeg tror alle disse er open source..?).</figcaption>
             </figure>
             <p>
-                Så skriver du inn http://localhost/mysite/ i nettleseren din, og trykker
-                på enter. Herfra kan du konfigurere wordpress siden din!
+                <b>Så tar jeg for meg fordeler og ulemper fra brukers ståsted.</b> Det som er veldig fint for bruker er 
+                at CMS er enkelt, enkelt og enkelt. I et godt utformet CMS system vil det å skrive artikler være som å skrive i Word,
+                 med en publiser knapp for å laste opp innhold. Bruker kan redigere innholdet og forhåndsvise innleggene ekstremt enkelt.
+                 Dette er den store fordelen med CMS. Et problem kan være at en bruker har null kontroll med hvordan artiklen vises, han/hun er
+                 kanskje låst til et system uten muligheter for å gjøre innlegg mer personlige. Hvis en bruker har litt kunnskap kan det være dumt
+                 at han/hun ikke får lov til å endre noe av designet/funksjonaliteten. Likevel finnes det mange løsninger der bruker i varierende 
+                 grad kan forandre designet noe/mye. Et annet problem for en innholdsprodusent kan være at hvis han/hun/bedriften skal ha closed source
+                 systemer, så kan det fort bli veldig dyrt! Open Source trenger heller ikke være gratis, da plugins/temaer kan være dyre. Hvis 
+                 jeg skulle hatt "pro" versjonen av butikk temaet jeg brukte på Wordpress, ville det kostet 200kr hver måned.
             </p>
-            <figure>
-                <img src="bilder/wpsteg8.jpg" alt="Illustrasjonsbilde" />
-                <figcaption>
-                    Velg ønsket språk.
-                </figcaption>
-            </figure>
-            <p>
-                Her skal du skrive inn navn på databasen, brukernavn og 
-                passord. (kalte den selv for test_db med root som brukernavn). 
-                Du trenger ikke fylle inn noe passord, serveren går jo bare lokalt 
-                likevel. Tabellprefiks, skriv wp_.
-            </p>
-            <figure>
-                <a href="bilder/wpsteg9.jpg">
-                    <img src="bilder/wpsteg9.jpg" alt="Illustrasjonsbilde" />
-                </a>
-                <figcaption>
-                    Send.    
-                </figcaption>
-            </figure>
-            <p>
-                Under skriver du inn tittel, brukernavn, passord og epost. Dette er innlogging
-                til selve wordpress siden, slik at hvis denne websiden var oppe og gikk
-                på en ordentlig server, ville dette vært innlogging, og her kunne du ha logget
-                inn fra hvor som helst i verden.
-            </p>
-            <figure>
-                <a href="bilder/wpsteg10.jpg">
-                    <img src="bilder/wpsteg10.jpg" alt="Illustrasjonsbilde" />
-                </a>
-                <figcaption>
-                    Til slutt, velg installer.
-                </figcaption>
-            </figure>
-            <p>
-                Da skal wordpress-nettstedet ditt være klart, så nå er det fritt frem 
-                å begynne å bygge nettstedet som er den morsomme delen!
-            </p>
-            
         </article>
     </main>
     <aside>
         <article>
-            <h2>Hvordan installere WAMP</h2>
-            <iframe src="https://www.youtube.com/embed/nVGU9_8T7I0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </article>
-        <article>
             <h2>Lenker</h2>
-            <p><a href="http://www.wampserver.com/en/">Nedlasting av WAMP</a></p>
+            <p><a href="https://wordpress.com/">Wordpress</a></p>
+            <p><a href="https://www.drupal.org/">Drupal</a></p>
+            <p><a href="https://www.joomla.org/">Joomla</a></p>
         </article>
     </aside>
     <footer>

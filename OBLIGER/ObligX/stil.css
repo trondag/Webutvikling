@@ -130,4 +130,12 @@ a:hover {
     }
 }
 
-@media only screen and (min-width:)
+@media only screen and (min-width: 700px){
+    nav p {
+        display: none;
+    }
+
+    .menyElementer p a{
+        display: inline-block !important;
+    }
+}
