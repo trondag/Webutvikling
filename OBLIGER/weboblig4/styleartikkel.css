@@ -10,6 +10,28 @@ body{
     border: solid 10px rgba(255, 255, 255, 0);
 }
 
+/* Skip to main content knapp */
+.skip {
+    position: absolute;
+    top: -1000px;
+    left: -1000px;
+    height: 1px;
+    width: 1px;
+    text-align: left;
+    overflow: hidden;
+    background-color: lightgray;
+}
+
+a.skip:active, 
+a.skip:focus, 
+a.skip:hover {
+    left: 0; 
+    top: 0;
+    width: auto; 
+    height: auto; 
+    overflow: visible; 
+}
+
 /*grid*/
 header {grid-area: header;}
 nav {grid-area: nav;}
