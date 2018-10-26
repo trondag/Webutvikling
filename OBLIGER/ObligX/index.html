@@ -47,23 +47,21 @@
 
                     request.send();
 
-                    skjulMeny();
+                    document.getElementById("menyKnapp").onclick = visMeny;
 
 
                 }
 
                 function visMeny(){
 
+                    document.getElementById("menyElementer").className = "vistMeny";
                     document.getElementById("menyKnapp").onclick = skjulMeny;
-                    document.getElementById("menyElementer").style.display = "block";
-                    document.getElementById("menyKnapp").src="bilder/ikoner/kryss.png";
                 }
 
                 function skjulMeny(){
 
+                    document.getElementById("menyElementer").className = "skjultMeny";
                     document.getElementById("menyKnapp").onclick = visMeny;
-                    document.getElementById("menyElementer").style.display = "none";
-                    document.getElementById("menyKnapp").src="bilder/ikoner/menyikon.png";
                 }
 
                 function lagArticle(artikkelNummer){
@@ -141,7 +139,7 @@
                 Meny
             </p>
         </nav>
-        <nav id="menyElementer">
+        <nav id="menyElementer" class="skjultMeny">
             <p><a href="http://itstud.hiof.no/~trondg/studiewebsted/">Trond</a></p>
             <p><a href="http://itstud.hiof.no/~trondg/web/weboblig3/">Webutvikling</a></p>
             <p><a href="http://itstud.hiof.no/~trondg/infprog_obliger/">Infprog</a></p>

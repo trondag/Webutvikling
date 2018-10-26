@@ -9,18 +9,46 @@ nav {
     font-family: 'Mali', cursive;
 }
 
-/*body {
-    background-image: url(bilder/bakgrunn.png);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-}*/
+#menyKnapp:hover {
+    cursor: pointer;
+}
 
 p img {
     height: 2em;
     position: relative;
     top: 8px;
 }
+
+.skjultMeny {
+    display: none;
+}
+
+.vistMeny {
+        position: relative;
+        left: 30px;
+        animation-duration: 1s;
+        animation-name: slidein;
+      }
+      
+      @keyframes slidein {
+        from {
+          left: -15%;
+          width: -150%; 
+        }
+      
+        75% {
+          margin-left: 10%;
+          width: 150%;
+        }
+      
+        to {
+          margin-left: 0%;
+          width: 100%;
+          left: 30px;
+        }
+      }
+      
+    
 
 article h2 {grid-area: header;}
 .datoClass {grid-area: dato;}
@@ -135,7 +163,22 @@ a:hover {
         display: none;
     }
 
-    .menyElementer p a{
-        display: inline-block !important;
+    .skjultMeny , .skjultMeny p{
+        display: inline-block !important ;
     }
+
+    .vistMeny , .vistMeny p{
+        display: inline-block !important ;
+    }
+
+    a {
+        background-color: white;
+        margin-right: 50px;
+    }
+
+    a:hover{
+        padding: 0px;
+        background-color: rgb(71, 219, 175);
+    }
+
 }
