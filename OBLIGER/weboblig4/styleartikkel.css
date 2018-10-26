@@ -13,6 +13,7 @@ body{
 /*grid*/
 header {grid-area: header;}
 nav {grid-area: nav;}
+.breadcrumb {grid-area: crumbs;}
 main {grid-area: main;}
 footer {grid-area: footer;}
 aside {grid-area: aside;}
@@ -24,6 +25,7 @@ aside {grid-area: aside;}
         grid-template-areas:
             'header aside'
             'nav aside'
+            'crumbs aside'
             'main aside'
             'footer footer';
         grid-column-gap: 5%;
@@ -74,6 +76,28 @@ nav a:nth-child(even){
     background: #C4DFE6;
     color: #07575B;
 }
+/* BreadCrumbs */
+.breadcrumb {
+    display: flex;
+    justify-content: start;
+
+}
+.breadcrumb ul{
+    display: flex;
+    list-style: none;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.breadcrumb li::before {
+    content: "→";
+}
+
+.breadcrumb a{
+    background-color: rgba(255, 255, 255, 0);
+    color: #07575B;
+}
+
+
 
 /* Hovedkolonne */
  main article{

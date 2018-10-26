@@ -18,6 +18,11 @@ p img {
     position: relative;
     top: 8px;
 }
+/*
+.ikon:active{
+
+}
+*/
 
 .skjultMeny {
     display: none;
