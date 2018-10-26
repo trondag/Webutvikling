@@ -155,6 +155,7 @@ a:hover {
         max-height: 300px;
         align-self: center;
         transition: all 2s;
+        margin-left: 5px;
     }
 
     .bildeClass:hover {
@@ -183,7 +184,35 @@ a:hover {
 
     a:hover{
         padding: 0px;
-        background-color: rgb(71, 219, 175);
     }
 
+    article a {
+        background-color: rgb(71, 219, 175)
+    }
+
+}
+
+@media only screen and (min-width: 850px){
+    h1 {
+        font-size: 5em;
+    }
+
+    h1:hover {
+        font-size: 5em;
+    }
+
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    main article{
+        grid-template-columns: 200px 450px;
+        margin: 30px;
+    }
+
+    main article a {
+        font-size: 150%;
+    }
 }
