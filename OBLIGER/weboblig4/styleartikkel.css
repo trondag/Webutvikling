@@ -159,6 +159,8 @@ aside article a {
     margin-left: 10%;
     border-top: solid #07575B;
     border-bottom: solid #07575B;
+    border-left: solid rgba(7, 87, 91, 0);
+    border-right: solid rgba(7, 87, 91, 0);
     padding: 0.5%
 }
 
