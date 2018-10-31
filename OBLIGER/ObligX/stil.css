@@ -164,6 +164,31 @@ a:hover {
     }
 }
 
+footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: rgb(71, 219, 175);
+    margin-top: 40px;
+    padding: 30px;
+}
+
+footer section {
+    width: 40%;
+    text-align: center;
+    min-width: 300px;
+    max-width: 600px;
+}
+
+footer p, footer h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+footer a:hover {
+    font-size: 2rem;
+}
+
 @media only screen and (min-width: 700px){
     nav p {
         display: none;
@@ -177,7 +202,7 @@ a:hover {
         display: inline-block !important ;
     }
 
-    a {
+    nav a, main a {
         background-color: white;
         margin-right: 50px;
     }
