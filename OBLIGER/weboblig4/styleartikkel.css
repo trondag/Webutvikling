@@ -2,6 +2,11 @@ html{
     background-image: url("bilder/bakgrunn.jpg")
 }
 
+/***************************************************************************************/
+/*----CSS har blitt litt rotete etter all redigeringen av alle obligene, beklager det!-*/
+/*-----------------------Hamburger meny ble også veldig hacky :( ----------------------*/
+/***************************************************************************************/
+
 body{
     max-width: 1000px;
     margin: auto;
@@ -11,6 +16,7 @@ body{
 }
 
 /* Skip to main content knapp */
+/* Fikk en del hjelp av Google */
 .skip {
     position: absolute;
     top: -1000px;
@@ -54,19 +60,6 @@ aside {grid-area: aside;}
     }
 }
 
-@media (max-width: 500px) {
-    nav {
-        text-align: center;
-        margin-right: 18px;
-    }
-    
-    nav p a {
-        width: 100%;
-        display: block;
-    }
-}
-
-
 /* Header */
 h1{
     color:#07575B;
@@ -81,6 +74,11 @@ nav {
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin-bottom: 8px;
+}
+
+/* For å skjule menyknapp */
+#menyKnappNav {
+    display: none;
 }
 
 nav a{
@@ -105,7 +103,7 @@ nav a:nth-child(even){
 
 }
 .breadcrumb ul{
-    display: flex;
+    display: flex !important;
     list-style: none;
     margin-top: 0px;
     margin-bottom: 0px;
@@ -123,17 +121,17 @@ nav a:nth-child(even){
 
 /* Hovedkolonne */
  main article{
-    border-top: solid 10px #66A5AD;
-    display: flex;
-    flex-direction: column;
-    font-family: 'EB Garamond', serif;
+     border-top: solid 10px #66A5AD;
+     display: flex;
+     flex-direction: column;
+     font-family: 'EB Garamond', serif;
+     
+    }
     
-}
-
-figure {
-    padding-right: 0;
-    margin-right: 0;
-    width: 60%;
+    figure {
+        padding-right: 0;
+        margin-right: 0;
+        width: 60%;
     min-width: 200px;
 }
 
@@ -199,4 +197,34 @@ footer {
     color: #07575B;
     display: flex;
     justify-content: space-evenly;
+}
+
+@media (max-width: 500px) {
+    nav {
+        text-align: center;
+    }
+
+
+    #menyElementer a {
+        width: 100%;
+    }
+
+    #menyKnappNav {
+        display: block !important;
+        width: 45px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #menyElementer {
+        display: none;
+    }
+
+    .vistMeny {
+        display: flex !important;
+    }
+    
+    .skjultMeny {
+        display: none !important;
+    }
 }

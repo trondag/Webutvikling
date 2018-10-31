@@ -2,6 +2,11 @@ html{
     background-image: url("bilder/bakgrunn.jpg")
 }
 
+/***************************************************************************************/
+/*----CSS har blitt litt rotete etter all redigeringen av alle obligene, beklager det!-*/
+/*-----------------------Hamburger meny ble også veldig hacky :( ----------------------*/
+/***************************************************************************************/
+
 body{
     max-width: 1000px;
     margin: auto;
@@ -11,6 +16,7 @@ body{
 }
 
 /* Skip to main content */
+/* Fikk en del hjelp av Google */
 .skip {
     position: absolute;
     top: -1000px;
@@ -52,26 +58,6 @@ aside {grid-area: aside;}
     }
 }
 
-/* Hvis viewport er under 400px */
-@media (max-width: 500px) {
-    nav {
-        text-align: center;
-        margin-right: 18px;
-    }
-    
-    nav p a {
-        width: 100%;
-        display: block;
-    }
-
-    main section {
-        flex-direction: column;
-    }
-
-    main figure {
-        margin: auto;
-    }
-}
 
 /* Header */
 h1{
@@ -87,6 +73,11 @@ nav {
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin-bottom: 8px;
+}
+
+/* For å skjule menyknapp */
+#menyKnappNav {
+    display: none;
 }
 
 nav a{
@@ -112,7 +103,7 @@ main {
     flex-direction: column;
 }
 
- main section{
+main section{
     border-top: solid 10px #66A5AD;
     display: flex;
     font-family: 'EB Garamond', serif;
@@ -195,4 +186,34 @@ footer {
     color: #07575B;
     display: flex;
     justify-content: space-evenly;
+}
+
+/* Hvis viewport er under 400px */
+@media (max-width: 500px) {
+    nav {
+        text-align: center;
+    }
+
+    #menyElementer a {
+        width: 100%;
+    }
+
+    #menyKnappNav {
+        display: block !important;
+        margin-left: auto;
+        margin-right: auto;
+        width: 45px;
+    }
+
+    #menyElementer {
+        display: none;
+    }
+
+    .vistMeny {
+        display: flex !important;
+    }
+    
+    .skjultMeny {
+        display: none !important;
+    }
 }
