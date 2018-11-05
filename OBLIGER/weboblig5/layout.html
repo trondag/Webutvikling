@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styleartikkel.css" />
+    <link rel="stylesheet" href="print.css" media="print" />
+    <title>Trond G.. | CSS layout</title>
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
+    <script src="meny.js"></script>
+</head>
+
+<body>
+    <a href="#content" class="skip" tabindex="2" >Skip to main content</a>
+    <header>
+        <h1>Trond G..</h1>
+    </header>
+    <nav id="menyKnappNav">
+        <p>
+            <img class="ikon" id="menyKnapp" src="bilder/ikoner/menyikon.png" alt="Hamburger meny ikon" />
+            Meny
+        </p>
+    </nav>
+    <nav id="menyElementer" class="skultMeny">
+        <a href="index.html">Hjem</a>
+        <a href="git.html">GIT/Github</a>
+        <a href="media.html">Mediatyper</a>
+        <a href="layout.html">CSS Layouts</a>
+        <a href="responsiv.html">Responsivt design</a>
+        <a href="u-utforming.html">Universell utforming</a>
+        <a href="wamp.html">WAMP/MAMP</a>
+        <a href="wordpress.html">Inst. av Wordpress</a>
+        <a href="wptest.html">Test av Wordpress</a>
+        <a href="cms.html">CMS systemer</a>
+    </nav>
+    <nav aria-label="Breadcrumb" class="breadcrumb">
+        <ul>
+            <li><a href="index.html">Hjem</a></li>
+            <li><a href="layout.html">CSS Layouts</a></li>
+        </ul>
+    </nav>
+    <main id="content">
+        <article>
+            <header><h2>Layout</h2></header>
+            <p>Det er mange forskjellige måter å lage layout til et HTML dokument. Jeg går gjennom noen av disse, men tar først for meg gamle metoder.</p>
+            <h3>CSS level 1</h3>
+            <p>Selve starten til CSS begynner i det sekundet Håkon Wium Lie sender en epost til WC3 i 1994.
+                Tiden etter er historien om irriterende floats, svetting foran dataen og en hensynsløs og blodig krig mellom nettlesere.
+            </p>
+            <p>Jeg vil her ikke gå gjennom "the dark ages", det kapittelet blir litt for mørkt for meg. Jeg begynner heller i CSS level 1</p>
+            <p>
+                Før brukte man ikke egne stilark og slikt, man koda CSS inline i HTML koden. Width og height, float og clear, margin og padding kom på denne tiden (90-tallet).
+                Disse attributtene var banebrytende på denne tiden, rett og slett en revolusjon innen web-design.
+                Nå trengte man ikke lenger å bruke br-tagger overalt for å bryte linje.
+            </p>
+            <h3>CSS level 2</h3>
+            <figure>
+                <img src="bilder/war.jpg" />
+                <figcaption>Browser Wars</figcaption>
+            </figure>
+            <p>
+                I 1998 ble level 2 lansert, og vi fikk table-taggen. Man startet med å benytte egne stilark for CSS, CSS ble
+                nemlig definert på denne tiden. Derfor kunne man begynne å skille design og innhold fra hverandre. Desverre for
+                    table-taggen, tok det tid før den ble støtta i IE.
+                Webutviklere hacka nettsidene sine med float, clearfix og position: absolute.
+                Mens alle utviklere svetta og bantes over floatingen sin, satt en gruppe utviklere i WC3 og jobbet på noe stort.
+            </p>
+            <p>
+                Litt at problemet på denne tiden, var at teamet bak CSS implementerte en rekke ting, men browsere ville ikke
+                ha egenskapene i nettleserne. Det var derfor en rekke bugs og feil.
+            </p>
+            <h3>CSS level 3</h3>
+            <p>
+                Tiden for revolusjon var kommet, CSS3 og HTML5 revolusjonerte web-verden! Browsere og CSS var da blitt venner igjen,
+                Browser Wars var ferdig og en ny æra for webdesign sto klar.
+            </p>
+            <h3>CSS Flexbox</h3>
+            <p>
+                Arbeidet med flexbox startet i 2008, og det ble implementert for fullt i 2015. Et stadig større krav etter responsivt design på
+                nettstedene med stadig større variasjon i skjermstørrelse krevde frem endringer. Poenget med flexbox er å fylle ut plassen
+                til et område/container/box uansett skjermstørrelse.
+            </p>
+            <figure>
+                <img src="bilder/flex-wrap.jpg" alt="Bilde av hvordan flex-wrap fungerer" />
+                <figcaption>Slik vil elementene falle til linjen under, når skjermbredden justeres</figcaption>
+            </figure>
+            <p>
+                I flexbox velger man et morelement som man gir egenskaper/attributter, og dette vil påvirke child-elementene i boksen. Her har
+                man man mulighet til å velge hvordan elementene skal wrappe hvis det blir trangt, hvordan de skal bevege seg i forhold til hverandre
+                samt om elementene skal endre størrelse.
+            </p>
+            <figure>
+                <img src="bilder/justify.jpg" alt="Viser forskjellige justify-content attributter" />
+                <figcaption>(Justify-content:) attributter</figcaption>
+            </figure>
+            <h3>CSS Grid</h3>
+            <p>
+                Min personlige favoritt Grid fikk støtte i de fleste nettlesere i oktober, 2017. Poenget med grid, er at vi 
+                nå har full kontroll over elementene i en nettside i mye større grad
+                enn floats osv..
+            </p>
+            <figure>
+                <img src="bilder/grid.jpg" alt="Illustrasjon av grid layout" />
+                <figcaption>Ligner på en tabell, her har har vi full kontroll!</figcaption>
+            </figure>
+            <p>
+                Med grid, lager vi en slags tabell som vi plasserer elementer i. Tabellen kan kodes på flere måter, en måte er grid-template-areas. (se bilde under)
+                Når vi har laget et grid for alle elementene våre, vil vi til enhver tid ha full
+                kontroll over hvor de havner, de kan nemlig ikke gå ut av plassen sin i grid systemet uten videre.
+            </p>
+            <figure>
+                <img src="bilder/grid-kode.jpg" alt="Illustrasjon av grid kode" />
+                <figcaption>Slik ser koden ut for grid-layouten til dette nettstedet. Hvis skjermbredden kommer under 700 pixler, forsvinner grid. (media-tag)</figcaption>
+            </figure>
+            <h3>Grid eller flexbox?</h3>
+            <p>
+                Hvis vi skal vite hva som er best i hvilken situasjon, må vi vite hvordan vi vil at elementene skal oppføre seg.
+                I et responsivt design der elementer skal flyte rundt på nettsiden pent og smidig, vil flexbox være
+                å foretrekke. På en annen side vil vi ikke ha like mye kontroll over elementene som vi har i grid. Grid
+                kan også fungere bra i responsivt design, da grid også kan settes til å scale med viewport. Et problemet
+                med grid er likevel at det ikke er støtta i Explorer eller Edge.
+            </p>
+            <p><a href="http://fantasai.inkedblade.net/weblog/2012/css-layout-evolution/">Jeg hentet mye informasjon fra denne..</a></p>
+            <p><a href="https://www.w3.org/Style/CSS20/">..og denne siden!</a></p>
+        </article>
+    </main>
+    <aside>
+        <article>
+            <h2>Floats & Clears</h2>
+            <iframe src="https://www.youtube.com/embed/xFGBNv2KeVU" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </article>
+        <article>
+            <h2>Flexbox</h2>
+            <iframe src="https://www.youtube.com/embed/JJSoEo8JSnc" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </article>
+        <article>
+            <h2>Grid</h2>
+            <iframe src="https://www.youtube.com/embed/jV8B24rSN5o" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </article>
+        <article>
+            <h2>Lenker</h2>
+            <p><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Flexbox Guide</a></p>
+            <p><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">Grid Guide</a></p>
+        </article>
+    </aside>
+    <footer>
+        <p>#Trond Graabræk</p>
+        <p>trondg.g@hiof.no</p>
+    </footer>
+</body>
+</html>

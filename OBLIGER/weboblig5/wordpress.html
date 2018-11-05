@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styleartikkel.css" />
+    <link rel="stylesheet" href="print.css" media="print" />
+    <title>Trond G.. | Inst. av Wordpress</title>
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
+    <script src="meny.js"></script>
+</head>
+
+<body>
+    <a href="#content" class="skip" tabindex="2" >Skip to main content</a>
+    <header>
+        <h1>Trond G..</h1>
+    </header>
+    <nav id="menyKnappNav">
+        <p>
+            <img class="ikon" id="menyKnapp" src="bilder/ikoner/menyikon.png" alt="Hamburger meny ikon" />
+            Meny
+        </p>
+    </nav>
+    <nav id="menyElementer" class="skultMeny">
+        <a href="index.html">Hjem</a>
+        <a href="git.html">GIT/Github</a>
+        <a href="media.html">Mediatyper</a>
+        <a href="layout.html">CSS Layouts</a>
+        <a href="responsiv.html">Responsivt design</a>
+        <a href="u-utforming.html">Universell utforming</a>
+        <a href="wamp.html">WAMP/MAMP</a>
+        <a href="wordpress.html">Inst. av Wordpress</a>
+        <a href="wptest.html">Test av Wordpress</a>
+        <a href="cms.html">CMS systemer</a>
+    </nav>
+    <nav aria-label="Breadcrumb" class="breadcrumb">
+        <ul>
+            <li><a href="index.html">Hjem</a></li>
+            <li><a href="wordpress.html">Inst. av Wordpress</a></li>
+        </ul>
+    </nav>
+    <main id="content">
+        <article>
+            <header><h2>Hvordan installere Wordpress på WAMP?</h2></header>
+            <p>
+                Vi skal nå sette opp Wordpress på vår egen virtuelle webserver (som kjører lokalt på WAMP).
+            </p>
+            <figure>
+                <img src="bilder/wpsteg1.jpg" alt="Illustrasjonsbilde av menyen til WAMP." />
+                <figcaption>
+                    Venstreklikk på WAMP logoen nede på oppgavelinjen, og trykk 
+                    så på phpMyAdmin (som er server programvaren vi skal bruke).
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="bilder/wpsteg2.jpg" alt="Illustrasjonsbilde av innlogging til PHP server." />
+                <figcaption>
+                    Default brukernavn er root, og ikke noe passord.
+                </figcaption>
+            </figure>
+            <figure>
+                <a href="bilder/wpsteg3.jpg">
+                    <img src="bilder/wpsteg3.jpg" alt="Illustrasjonsbilde av hvor du trykker for å komme til databaser." />
+                </a>
+                <figcaption>
+                    Trykk på databaser.
+                </figcaption>
+            </figure>
+            <figure>
+                <a href="bilder/wpsteg4.jpg">
+                    <img src="bilder/wpsteg4.jpg" alt="Illustrasjonsbilde av database instillinger." />
+                </a>
+                <figcaption>
+                    Her skal du sette opp databasen til serveren(der filene er 
+                    lagret). Kall den gjerne test_db, og gjerne utf8.
+                </figcaption>
+            </figure>
+            <p>
+                Da har vi satt opp WAMP server med phpMyAdmin. Det neste vi må gjøre,
+                er å installere Wordpress på serveren. Første steg; last ned programvaren!
+            <figure>
+                <img src="bilder/wpsteg5.jpg" alt="Illustrasjonsbilde som viser hvor du skal trykke for å laste ned." />
+                <figcaption>
+                    Last ned.
+                </figcaption>
+            </figure>
+            <figure>
+                <a href="bilder/wpsteg6.jpg">
+                    <img src="bilder/wpsteg6.jpg" alt="Bilde som viser hvor Wordpress installasjonen finnes." />
+                </a>
+                <figcaption>
+                    Pakk ut den zippede mappen, og legg mappen inn i windows/wamp64/www
+                </figcaption>
+            </figure>
+            <p>
+                Det er <b>viktig</b> at du får lagt mappen inn i www i mappen til wamp64!
+            </p>
+            <figure>
+                <a href="bilder/wpsteg7.jpg">
+                    <img src="bilder/wpsteg7.jpg" alt="Illustrasjonsbilde som viser hvor du skal legge Wordpress installasjonen." />
+                </a>
+                <figcaption>
+                    
+                </figcaption>
+            </figure>
+            <p>
+                Så skriver du inn http://localhost/mysite/ i nettleseren din, og trykker
+                på enter. Herfra kan du konfigurere wordpress siden din!
+            </p>
+            <figure>
+                <img src="bilder/wpsteg8.jpg" alt="Illustrasjonsbilde som viser valg av språk." />
+                <figcaption>
+                    Velg ønsket språk.
+                </figcaption>
+            </figure>
+            <p>
+                Her skal du skrive inn navn på databasen, brukernavn og 
+                passord. (kalte den selv for test_db med root som brukernavn). 
+                Du trenger ikke fylle inn noe passord, serveren går jo bare lokalt 
+                likevel. Tabellprefiks, skriv wp_.
+            </p>
+            <figure>
+                <a href="bilder/wpsteg9.jpg">
+                    <img src="bilder/wpsteg9.jpg" alt="Illustrasjonsbilde som viser hvordan du skriver inn databasedetaljene." />
+                </a>
+                <figcaption>
+                    Send.    
+                </figcaption>
+            </figure>
+            <p>
+                Under skriver du inn tittel, brukernavn, passord og epost. Dette er innlogging
+                til selve wordpress siden, slik at hvis denne websiden var oppe og gikk
+                på en ordentlig server, ville dette vært innlogging, og her kunne du ha logget
+                inn fra hvor som helst i verden.
+            </p>
+            <figure>
+                <a href="bilder/wpsteg10.jpg">
+                    <img src="bilder/wpsteg10.jpg" alt="Illustrasjonsbilde som viser vhrodan du logger inn på Wordpress, og hva nettstedet skal hete." />
+                </a>
+                <figcaption>
+                    Til slutt, velg installer.
+                </figcaption>
+            </figure>
+            <p>
+                Da skal wordpress-nettstedet ditt være klart, så nå er det fritt frem 
+                å begynne å bygge nettstedet som er den morsomme delen!
+            </p>
+            
+        </article>
+    </main>
+    <aside>
+        <article>
+            <h2>Lenker</h2>
+            <p><a href="https://www.wpbeginner.com/wp-tutorials/how-to-install-wordpress-on-your-windows-computer-using-wamp/">WP installsjons-guide</a></p>
+        </article>
+    </aside>
+    <footer>
+        <p>#Trond Graabræk</p>
+        <p>trondg.g@hiof.no</p>
+    </footer>
+</body>
+</html>
