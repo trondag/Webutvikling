@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>http://itstud.hiof.no/~trondg/web/weboblig5/</loc>
+  <lastmod>2018-10-31T12:24:11+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://itstud.hiof.no/~trondg/web/weboblig5/index.html</loc>
+  <lastmod>2018-10-31T12:24:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://itstud.hiof.no/~trondg/web/weboblig5/git.html</loc>
+  <lastmod>2018-10-31T12:24:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://itstud.hiof.no/~trondg/web/weboblig5/media.html</loc>
+  <lastmod>2018-10-31T12:24:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://itstud.hiof.no/~trondg/web/weboblig5/layout.html</loc>
+  <lastmod>2018-10-31T12:24:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://itstud.hiof.no/~trondg/web/weboblig5/responsiv.html</loc>
+  <lastmod>2018-10-31T12:24:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://itstud.hiof.no/~trondg/web/weboblig5/u-utforming.html</loc>
+  <lastmod>2018-10-31T12:24:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://itstud.hiof.no/~trondg/web/weboblig5/wamp.html</loc>
+  <lastmod>2018-10-31T12:24:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://itstud.hiof.no/~trondg/web/weboblig5/wordpress.html</loc>
+  <lastmod>2018-10-31T12:23:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://itstud.hiof.no/~trondg/web/weboblig5/wptest.html</loc>
+  <lastmod>2018-10-31T12:21:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://itstud.hiof.no/~trondg/web/weboblig5/cms.html</loc>
+  <lastmod>2018-10-31T12:23:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>
