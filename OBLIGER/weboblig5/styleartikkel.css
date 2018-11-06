@@ -40,7 +40,7 @@ a.skip:hover {
 
 /*grid*/
 header {grid-area: header;}
-nav {grid-area: nav;}
+body nav {grid-area: nav;}
 .breadcrumb {grid-area: crumbs;}
 main {grid-area: main;}
 footer {grid-area: footer;}
@@ -143,6 +143,14 @@ img{
 
 .utenBorder{
     border: none;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: lightgreen;
+    padding: 5px;
+    color: purple;
+    font-weight: bold;
 }
 
 aside{
