@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styleartikkel.css" />
+    <link rel="stylesheet" href="print.css" media="print" />
+    <title>Trond G.. | Teknisk implementering av sosiale medier</title>
+    <!--Meta informasjon for søkemotorer-->
+    <meta name="description" content="På denne siden kan du lese mer om 
+            SEO, eller søkemotoroptimalisering som forkortelsen står for." />
+    <meta name="theme-color" content="#07575B" />
+    <!--OpenGraph meta tags (Facebook)-->
+    <meta property="og:url" content="https://itstud.hiof.no/~trondg/web/weboblig5/some" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Teknisk impemplementering av sosiale medier" />
+    <meta property="og:description" content="Hvordan optimalisere websiden din for Facebook og Twitter linker? Se svaret her!" />
+    <meta property="og:image" content="https://itstud.hiof.no/~trondg/web/weboblig5/bilder/bildefb.png" />
+    <!--OpenGraph meta tags (Twitter)-->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@TrondGraabrk" />
+    <meta name="twitter:creater" content="@TrondGraabrk" />
+    <meta property="og:url" content="https://itstud.hiof.no/~trondg/web/weboblig5/some" />
+    <meta property="og:title" content="Teknisk implementering av sosiale medier" />
+    <meta property="og:description" content="Hvordan optimalisere websiden din for Facebook og Twitter linker? Se svaret her!" />
+    <meta property="og:image" content="https://itstud.hiof.no/~trondg/web/weboblig5/bilder/bildefb.png" />
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
+    <script src="meny.js"></script>
+</head>
+
+<body>
+    <a href="#content" class="skip" tabindex="0" >Skip to main content</a>
+    <header>
+        <h1>Trond G..</h1>
+    </header>
+    <nav id="menyKnappNav">
+        <p>
+            <img class="ikon" id="menyKnapp" src="bilder/ikoner/menyikon.png" alt="Hamburger meny ikon" />
+            Meny
+        </p>
+    </nav>
+    <nav id="menyElementer" class="skultMeny">
+        <a href="index.html">Hjem</a>
+        <a href="git.html">GIT/Github</a>
+        <a href="media.html">Mediatyper</a>
+        <a href="layout.html">CSS Layouts</a>
+        <a href="responsiv.html">Responsivt design</a>
+        <a href="u-utforming.html">Universell utforming</a>
+        <a href="wamp.html">WAMP/MAMP</a>
+        <a href="wordpress.html">Inst. av Wordpress</a>
+        <a href="wptest.html">Test av Wordpress</a>
+        <a href="cms.html">CMS systemer</a>
+        <a href="seo.html">Søkemotoroptimalisering</a>
+    </nav>
+    <nav aria-label="Breadcrumb" class="breadcrumb">
+        <ul>
+            <li><a href="index.html">Hjem</a></li>
+            <li><a href="some.html">Teknisk implementasjon av sosiale medier</a></li>
+        </ul>
+    </nav>
+    <main id="content">
+        <article>
+            <header><h2>Teknisk impemplementering av sosiale medier</h2></header>
+            <nav>
+                <a href="#sosiale">1.1 Sosiale medier</a>
+                <a href="#opengraph">1.2 OpenGraph med Facebook</a>
+                <a href="#twitter">1.3 OpenGraph med Twitter</a>
+            </nav>
+            <h3 id="sosiale">1.1 Sosiale medier</h3>
+            <p>
+                Sosiale medier(SoMe) er noe som er blitt gigantisk, og det blir bare større. 44% av verdens befolkning befinner seg på 
+                SoMe, dette er derfor et veldig stort marked! Derfor er det veldig viktig at vi optimaliserer nettstedene våre også for
+                SoMe.
+            </p>
+            <p>
+                Hvis en bruker linker til vår nettside i FB eller Twitter, vil vi helst at denne linken skal se pen ut i et av de nevnte SoMe. 
+                Det finnes en markup for nettop dette, nemlig OpenGraph. OpenGraph er meta tagger som vi skriver i head taggen i HTML-dokumentet. 
+            </p>
+            <h3 id="opengraph">1.2 OpenGraph med Facebook</h3>
+            <p>
+                OpenSocialGraph som Facebook kaller sitt opplegg bruker RDFa i meta tags. Da trenger vi en url, title, description, image og type.
+                Dette kan vi legge inn slik:
+            </p>
+            <code>
+                <p>&lt;meta property="og:url" content="https://itstud.hiof.no/~trondg/web/weboblig5/some" /&gt;</p>
+                <p>&lt;meta property="og:type" content="article" /&gt;</p>
+                <p>&lt;meta property="og:title" content="Teknisk impemplementering av sosiale medier" /&gt;</p>
+                <p>&lt;meta property="og:description" content="Hvordan optimalisere websiden din for Facebook og Twitter linker? Se svaret her!" /&gt;</p>
+                <p>&lt;meta property="og:image" content="https://itstud.hiof.no/~trondg/web/weboblig5/bilder/bildefb.png" /&gt;</p>
+            </code>
+            <ul>
+                <li>url: URL til siden.</li>
+                <li>type: Type innhold, i dette tilfellet article.</li>
+                <li>title: Tittelen til siden.</li>
+                <li>description: Beskrivelse av innholdet på siden (Dette kommer også frem i linken).</li>
+                <li>image: Man kan også slenge med et bilde i linken, her trengs hele URLen til bildet.</li>
+            </ul>
+            <figure>
+                <img src="bilder/fbtest.png" alt="Bilde av link i Facebook." />
+                <figcaption>Slik ser linken ut!</figcaption>
+            </figure>
+            <h3 id="twitter">1.3 OpenGraph med Twitter</h3>
+            <p>
+                Vi kan også gjøre dette med twitter. I Twitter kan vi også lage Twitter cards, men disse er veldig kompliserte, 
+                derfor gidder jeg ikke gå mer inn på det nå. Men de har likevel en enklere måte som ligner veldig på Facebook sin.
+                Denne har jeg implementert på denne siden.
+            </p>
+            <code>
+                <p>&lt;meta name="twitter:card" content="summary_large_image" /&gt;</p>
+                <p>&lt;meta name="twitter:site" content="@TrondGraabrk" /&gt;</p>
+                <p>&lt;meta name="twitter:creater" content="@TrondGraabrk" /&gt;</p>
+                <p>&lt;meta property="og:url" content="https://itstud.hiof.no/~trondg/web/weboblig5/some" /&gt;</p>
+                <p>&lt;meta property="og:title" content="Teknisk implementering av sosiale medier" /&gt;</p>
+                <p>&lt;meta property="og:description" content="Hvordan optimalisere websiden din for Facebook og Twitter linker? Se svaret her!" /&gt;</p>
+                <p>&lt;meta property="og:image" content="https://itstud.hiof.no/~trondg/web/weboblig5/bilder/bildefb.png" /&gt;</p>
+            </code>
+            <ul>
+                <li>card: "Type" Twitter link du skal bruke, sumary_large_image er den enkleste.</li>
+                <li>site: Twitter brukernavn til nettsidens "firma"</li>
+                <li>creater: Twitter brukernavn til forfatter av artikkel i dette tilfellet</li>
+                <li>De andre attributtene betyr mer eller mindre det samme som FB linken.</li>
+            </ul>
+            <figure>
+                <img src="bilder/twittertest.png" alt="Bilde av Twitter link" />
+                <figcaption>Slik ser linken ut!</figcaption>
+            </figure>
+            <p>Jeg har også lagt inn OpenGraph i <a href="index.html">forsiden</a> og på <a href="seo.html"> siden om SEO.</a>
+        </article>
+    </main>
+    <aside>
+        <article>
+            <h2>Lenker:</h2>
+            <p><a href="https://www.google.no/search?q=twitter+opengraph&oq=twi&aqs=chrome.5.69i60l3j0j69i60j69i59.3179j0j4&sourceid=chrome&ie=UTF-8">Twitter OpenGraph</a></p>
+            <p><a href="https://developers.facebook.com/docs/sharing/webmasters/">Facebook OpenGraph</a></p>
+        </article>
+    </aside>
+    <footer>
+        <p>#Trond Graabræk</p>
+        <p>trondg.g@hiof.no</p>
+    </footer>
+</body>
+</html>

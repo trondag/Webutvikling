@@ -147,10 +147,10 @@ img{
 
 code {
     font-family: 'Courier New', Courier, monospace;
-    background-color: lightgreen;
+    background-color: rgba(7, 87, 91, 0.24);
     padding: 5px;
-    color: purple;
     font-weight: bold;
+    border-radius: 10px;
 }
 
 aside{

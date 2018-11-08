@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styleartikkel.css" />
+    <link rel="stylesheet" href="print.css" media="print" />
+    <link rel="stylesheet" href="svg.css" />
+    <title>Trond G.. | SVG | Scaleable Vector Graphics</title>
+    <!--Meta informasjon for søkemotorer-->
+    <meta name="description" content="På denne siden kan du lese mer om 
+            SVG-filer. Her finnes også noen forskjellige eksempler på bruk av SVG." />
+    <meta name="theme-color" content="#07575B" />
+    <!--OpenGraph meta tags (Facebook)-->
+    <meta property="og:url" content="https://itstud.hiof.no/~trondg/web/weboblig5/svg.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Bruk av SVG-filer" />
+    <meta property="og:description" content="Denne artikkelen handler om hvordan vi bruker SVG-filer." />
+    <meta property="og:image" content="https://itstud.hiof.no/~trondg/web/weboblig5/bilder/logo.png" />
+    <!--OpenGraph meta tags (Twitter)-->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@TrondGraabrk" />
+    <meta name="twitter:creater" content="@TrondGraabrk" />
+    <meta property="og:url" content="https://itstud.hiof.no/~trondg/web/weboblig5/svg.html" />
+    <meta property="og:title" content="Bruk av SVG-filer" />
+    <meta property="og:description" content="Denne artikkelen handler om hvordan vi bruker SVG-filer." />
+    <meta property="og:image" content="https://itstud.hiof.no/~trondg/web/weboblig5/bilder/logo.png" />
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
+    <script src="meny.js"></script>
+</head>
+
+<body>
+    <a href="#content" class="skip" tabindex="0" >Skip to main content</a>
+    <header>
+        <h1>Trond G..</h1>
+    </header>
+    <nav id="menyKnappNav">
+        <p>
+            <img class="ikon" id="menyKnapp" src="bilder/ikoner/menyikon.png" alt="Hamburger meny ikon" />
+            Meny
+        </p>
+    </nav>
+    <nav id="menyElementer" class="skultMeny">
+        <a href="index.html">Hjem</a>
+        <a href="git.html">GIT/Github</a>
+        <a href="media.html">Mediatyper</a>
+        <a href="layout.html">CSS Layouts</a>
+        <a href="responsiv.html">Responsivt design</a>
+        <a href="u-utforming.html">Universell utforming</a>
+        <a href="wamp.html">WAMP/MAMP</a>
+        <a href="wordpress.html">Inst. av Wordpress</a>
+        <a href="wptest.html">Test av Wordpress</a>
+        <a href="cms.html">CMS systemer</a>
+        <a href="seo.html">Søkemotoroptimalisering</a>
+    </nav>
+    <nav aria-label="Breadcrumb" class="breadcrumb">
+        <ul>
+            <li><a href="index.html">Hjem</a></li>
+            <li><a href="some.html">SVG</a></li>
+        </ul>
+    </nav>
+    <main id="content">
+        <article>
+            <header><h2>Bruk av SVG-filer</h2></header>
+            <nav>
+                <a href="#fordeler">1.1 Fordeler og ulemper med SVG</a>
+            </nav>
+            <p>
+                SVG filer er bilder som vi kan gjøre mye mer med enn vanlige jpg eller png bilder. SVG-filene er på en 
+                måte bygd opp av geometriske figurer som kan utgjøre blant annet en logo, et ikon, en animasjon, en illustrasjon, et skjema eller 
+                en graf. SVG kan kodes inline i html-koden, men dette er ekstremt tungvint da vi har andre programmer som gjør dette for oss. 
+                SVG-filene er for øvrig bygd opp med XML kode.
+            </p>
+            <h3 id="#fordeler">1.1 Fordeler og ulemper med SVG</h3>
+            <p>
+                Noe av det flotteste med SVG er at bildene skalerer seg automatisk, dermed vil vi aldri få kornete bilder hvis vi zoomer ut. 
+                Filstørrelsen vil derfor bli betydelig mindre enn et bilde. I tillegg kan vi stile disse filene i CSS, der vi kan bytte farger, 
+                legge til skygge osv. De vil også fungere fint som animerte elementer. 
+            </p>
+            <p>
+                Men! Vi kan ikke bruke foto, eller skjermdumper som SVG. Det ville blitt en FRYKTELIG komplisert SVG-fil, det hadde ikke blitt noe pent heller.
+            </p>
+            <h3 id="eksempler">1.2 Eksempler</h3>
+            <p>
+                Tester først inline SVG.
+            </p>
+            <code>
+                <p>&lt;svg width="100" height="100"&gt;</p>
+                    <p>&lt;circle cx="90" cy="100" r="70" stroke="darkblue" stroke-width="4" fill="lightblue" /&gt;</p>
+                <p>&lt;/svg&gt;</p>
+            </code>
+            <svg width="100" height="100">
+                <circle cx="90" cy="100" r="70" stroke="darkblue" stroke-width="4" fill="lightblue" />
+            </svg>
+            <svg width="100" height="100">
+                <circle cx="50" cy="50" r="40" stroke="darkblue" stroke-width="4" fill="lightblue" />
+            </svg>
+            <p>
+                Under har jeg laget en logo med et program som heter Inkscape. Denne er lagt inn med embed-taggen. Min opplevelse med embed-taggen
+                er at den er litt vanskelig å stile med css. Den blir behandlet som et vanlig bilde tror jeg.
+            </p>
+            <code>
+                &lt;embed type="image/svg+xml" width="400" height="400" src="bilder/ikoner/heidu.svg" /&gt;
+            </code>
+            <embed type="image/svg+xml" width="400" height="400" src="bilder/ikoner/heidu.svg" />
+            <p>
+                Vi kan også bruke object metoden:
+            </p>
+            <object id="objectsvg" type="image/svg+xml" width="400" height="400" data="bilder/ikoner/heidu.svg"></object> 
+        </article>
+    </main>
+    <aside>
+        <article>
+            <h2>Lenker:</h2>
+            <p><a href="https://www.google.no/search?q=twitter+opengraph&oq=twi&aqs=chrome.5.69i60l3j0j69i60j69i59.3179j0j4&sourceid=chrome&ie=UTF-8">Twitter OpenGraph</a></p>
+            <p><a href="https://developers.facebook.com/docs/sharing/webmasters/">Facebook OpenGraph</a></p>
+        </article>
+    </aside>
+    <footer>
+        <p>#Trond Graabræk</p>
+        <p>trondg.g@hiof.no</p>
+    </footer>
+</body>
+</html>
