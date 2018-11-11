@@ -236,3 +236,13 @@ footer {
         display: none !important;
     }
 }
+
+/* For SVG siden */
+
+.logo {
+    color: blue;
+}
+
+object {
+    width: 50%;
+}

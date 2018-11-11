@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styleartikkel.css" />
+    <link rel="stylesheet" href="print.css" media="print" />
+    <title>Trond G.. | Microdata | Testside 3</title>
+    <meta name="description" content="Test av microdata" />
+    <meta name="theme-color" content="#07575B" />
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
+    <script src="meny.js"></script>
+</head>
+
+<body>
+    <a href="#content" class="skip" tabindex="0" >Skip to main content</a>
+    <header>
+        <h1>Trond G..</h1>
+    </header>
+    <nav id="menyKnappNav">
+        <p>
+            <img class="ikon" id="menyKnapp" src="bilder/ikoner/menyikon.png" alt="Hamburger meny ikon" />
+            Meny
+        </p>
+    </nav>
+    <nav id="menyElementer" class="skultMeny">
+        <a href="index.html">Hjem</a>
+        <a href="git.html">GIT/Github</a>
+        <a href="media.html">Mediatyper</a>
+        <a href="layout.html">CSS Layouts</a>
+        <a href="responsiv.html">Responsivt design</a>
+        <a href="u-utforming.html">Universell utforming</a>
+        <a href="wamp.html">WAMP/MAMP</a>
+        <a href="wordpress.html">Inst. av Wordpress</a>
+        <a href="wptest.html">Test av Wordpress</a>
+        <a href="cms.html">CMS systemer</a>
+        <a href="seo.html">Søkemotoroptimalisering</a>
+        <a href="microdata.html">Microdata</a>
+        <a href="some.html">Implementering av sosiale medier</a>
+        <a href="svg.html">SVG-filer</a>
+    </nav>
+    <nav aria-label="Breadcrumb" class="breadcrumb">
+        <ul>
+            <li><a href="index.html">Hjem</a></li>
+            <li><a href="microdata.html">Microdata</a></li>
+            <li><a href="microdatatest3.html">Test 3</a></li>
+        </ul>
+    </nav>
+    <main id="content">
+        <article>
+            <h2>Konserter</h2>
+            <section vocab="http://schema.org/" typeof="MusicEvent">
+                <p property="startDate">June 1. 2019</p>
+                <h3 property="name">Backstreets back!</h3>
+                <p property="description">Backstreet er tilbake for å holde kosert i Oslo Spektrum!</p>
+                <img property="image" src="https://dbstatic.no/70438004.jpg?imageId=70438004&width=1024&height=615" />
+                <div class="artist" property="performer" typeof="MusicGroup">
+                    <p property="name">Backstreet Boys</p>
+                    <p property="genre">Rock</p>
+                </div>
+                <div property="location" typeof="MusicVenue">
+                    <meta property="name" content="Oslo Spektrum"/>
+                    <link property="sameAs" href="https://no.wikipedia.org/wiki/Oslo_Spektrum"/>
+                    <meta property="address" content="Sonja Henies plass 2, Oslo, Norge"/>
+                </div>
+            </section>
+        </article>
+    </main>
+    <aside>
+        <article>
+            <h2>Testsider:</h2>
+            <p><a href="microdatatest1.html">Test 1: Filmer</a></p>
+            <p><a href="microdatatest2.html">Test 2: Personer</a></p>
+            <p><a href="microdatatest4.html">Test 4: Bøker</a></p>
+            <p><a href="microdatatest5.html">Test 5: Biler</a></p>
+        </article>
+    </aside>
+    <footer>
+        <p>#Trond Graabræk</p>
+        <p>trondg.g@hiof.no</p>
+    </footer>
+</body>
+</html>

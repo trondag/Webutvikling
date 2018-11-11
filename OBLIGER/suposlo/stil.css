@@ -5,6 +5,12 @@ font-family: 'Luckiest Guy', cursive;
 font-family: 'Notable', sans-serif;
 font-family: 'Fugaz One', cursive;
 */
+
+body{
+    margin: 0;
+}
+
+/*--------Hamburger-meny-----------*/
 nav {
     font-family: 'Mali', cursive;
 }
@@ -18,11 +24,6 @@ p img {
     position: relative;
     top: 8px;
 }
-/*
-.ikon:active{
-
-}
-*/
 
 .skjultMeny {
     display: none;
@@ -42,7 +43,7 @@ p img {
         }
       
         75% {
-          margin-left: 10%;
+          margin-left: 5%;
           width: 150%;
         }
       
@@ -54,7 +55,7 @@ p img {
       }
       
     
-
+/*------------------Grid-----------------*/
 article h2 {grid-area: header;}
 .datoClass {grid-area: dato;}
 .genreClass {grid-area: genre;}
@@ -76,20 +77,7 @@ article{
     
 }
 
-main {
-    max-width: 370px;
-    margin: 0 auto;
-}
-
-.eventIkon {
-    height: 2.3em;
-}
-
-.infoClass {
-    text-align: center;
-}
-
-
+/*--------------------Header-----------------*/
 h1{
     text-align: center;
     font-family: 'Notable', sans-serif;
@@ -102,7 +90,20 @@ h1:hover {
     transition: 2s;
     color: rgb(71, 219, 175);
     text-shadow: 2px 2px 8px lightgray;
+}
 
+/*----------------Main (eventer)-----------------------*/
+main {
+    max-width: 370px;
+    margin: 0 auto;
+}
+
+.eventIkon {
+    height: 2.3em;
+}
+
+.infoClass {
+    text-align: center;
 }
 
 p, h2 {
@@ -133,6 +134,34 @@ a:hover {
     border-radius: 4px;
 }
 
+/*---------------Footer-----------------*/
+footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: rgb(71, 219, 175);
+    margin-top: 40px;
+    padding: 30px;
+}
+
+footer section {
+    width: 40%;
+    text-align: center;
+    min-width: 300px;
+    max-width: 600px;
+}
+
+footer p, footer h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+footer a:hover {
+    font-size: 2rem;
+    color: white;
+}
+
+/*-----------Skjermbredde 550px + -------------*/
 @media only screen and (min-width: 550px){
     main {
         max-width: none;
@@ -159,64 +188,58 @@ a:hover {
     }
 
     .bildeClass:hover {
-        transform: rotate(-15deg);
+        transform: rotate(-10deg);
         max-width: 600px;
     }
 }
 
-footer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    background-color: rgb(71, 219, 175);
-    margin-top: 40px;
-    padding: 30px;
-}
-
-footer section {
-    width: 40%;
-    text-align: center;
-    min-width: 300px;
-    max-width: 600px;
-}
-
-footer p, footer h2 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-footer a:hover {
-    font-size: 2rem;
-}
-
+/*-----------------Skjermbredde 700px + -----------*/
 @media only screen and (min-width: 700px){
     nav p {
         display: none;
     }
+    
+    nav a, main a {
+        background-color: white;
+    }
 
     .skjultMeny , .skjultMeny p{
-        display: inline-block !important ;
+        display: flex ;
     }
 
     .vistMeny , .vistMeny p{
-        display: inline-block !important ;
+        display: flex ;
     }
 
-    nav a, main a {
-        background-color: white;
-        margin-right: 50px;
+    nav {
+        justify-content: space-evenly;
+        width: 40%;
+        max-width: 550px;
+        margin-left: 10%;
+    }
+
+    nav p {
+        flex-grow: 1;
     }
 
     a:hover{
         padding: 0px;
+        font-size: 1.5em;
+        color: rgb(71, 219, 175);
     }
 
     article a {
-        background-color: rgb(71, 219, 175)
+        background-color: rgb(71, 219, 175);
+        width: 100%;
     }
 
+    article a:hover{
+        color: black;
+        font-size: 2em;
+    }
 }
 
+/*-------------------Skjermbredde 850px + -------------*/
 @media only screen and (min-width: 850px){
     h1 {
         font-size: 5em;
@@ -224,6 +247,10 @@ footer a:hover {
 
     h1:hover {
         font-size: 5em;
+    }
+
+    nav p{
+        font-size: 1.1rem;
     }
 
     main {

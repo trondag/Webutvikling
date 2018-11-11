@@ -53,6 +53,8 @@
         <a href="wptest.html">Test av Wordpress</a>
         <a href="cms.html">CMS systemer</a>
         <a href="seo.html">Søkemotoroptimalisering</a>
+        <a href="microdata.html">Microdata</a>
+        <a href="some.html">Implementering av sosiale medier</a>
     </nav>
     <nav aria-label="Breadcrumb" class="breadcrumb">
         <ul>
@@ -63,16 +65,13 @@
     <main id="content">
         <article>
             <header><h2>Bruk av SVG-filer</h2></header>
-            <nav>
-                <a href="#fordeler">1.1 Fordeler og ulemper med SVG</a>
-            </nav>
             <p>
                 SVG filer er bilder som vi kan gjøre mye mer med enn vanlige jpg eller png bilder. SVG-filene er på en 
                 måte bygd opp av geometriske figurer som kan utgjøre blant annet en logo, et ikon, en animasjon, en illustrasjon, et skjema eller 
                 en graf. SVG kan kodes inline i html-koden, men dette er ekstremt tungvint da vi har andre programmer som gjør dette for oss. 
                 SVG-filene er for øvrig bygd opp med XML kode.
             </p>
-            <h3 id="#fordeler">1.1 Fordeler og ulemper med SVG</h3>
+            <h3>Fordeler og ulemper med SVG</h3>
             <p>
                 Noe av det flotteste med SVG er at bildene skalerer seg automatisk, dermed vil vi aldri få kornete bilder hvis vi zoomer ut. 
                 Filstørrelsen vil derfor bli betydelig mindre enn et bilde. I tillegg kan vi stile disse filene i CSS, der vi kan bytte farger, 
@@ -81,7 +80,8 @@
             <p>
                 Men! Vi kan ikke bruke foto, eller skjermdumper som SVG. Det ville blitt en FRYKTELIG komplisert SVG-fil, det hadde ikke blitt noe pent heller.
             </p>
-            <h3 id="eksempler">1.2 Eksempler</h3>
+            <h3 id="eksempler">Eksempler</h3>
+            <h4>Inline SVG</h4>
             <p>
                 Tester først inline SVG.
             </p>
@@ -96,6 +96,7 @@
             <svg width="100" height="100">
                 <circle cx="50" cy="50" r="40" stroke="darkblue" stroke-width="4" fill="lightblue" />
             </svg>
+            <h4>Embed SVG</h4>
             <p>
                 Under har jeg laget en logo med et program som heter Inkscape. Denne er lagt inn med embed-taggen. Min opplevelse med embed-taggen
                 er at den er litt vanskelig å stile med css. Den blir behandlet som et vanlig bilde tror jeg.
@@ -104,17 +105,37 @@
                 &lt;embed type="image/svg+xml" width="400" height="400" src="bilder/ikoner/heidu.svg" /&gt;
             </code>
             <embed type="image/svg+xml" width="400" height="400" src="bilder/ikoner/heidu.svg" />
+            <h4>Object SVG</h4>
             <p>
-                Vi kan også bruke object metoden:
+                Vi kan også bruke object metoden, (som skal være den beste for CSS og JS manipulering):
             </p>
-            <object id="objectsvg" type="image/svg+xml" width="400" height="400" data="bilder/ikoner/heidu.svg"></object> 
+            <code>
+                &lt;object class="svg" type="image/svg+xml" width="400" height="400" data="bilder/ikoner/heidu.svg" &gt;
+                &lt;img src="bilder/ikoner/heidu.svg" alt="En SVG figur" /&gt;
+                &lt;/object&gt;
+            </code>
+            <object class="svg" type="image/svg+xml" width="400" height="400" data="bilder/ikoner/heidu.svg" >
+                <img src="bilder/ikoner/heidu.svg" alt="En SVG figur" />
+            </object>
+            <!--
+            <object class="logo" type="image/svg+xml" data="bilder/ikoner/heidu.svg">
+                <img class="logo" src="bilder/ikoner/heidu.svg" alt="svg">
+            </object>
+            -->
+            <h4>IMG SVG</h4>
+            <p>
+                Vi kan også benytte en img tag:
+            </p>
+            <figure>
+                <img src="bilder/ikoner/heidu.svg" alt="En SVG figur" />
+            </figure>
         </article>
     </main>
     <aside>
         <article>
             <h2>Lenker:</h2>
-            <p><a href="https://www.google.no/search?q=twitter+opengraph&oq=twi&aqs=chrome.5.69i60l3j0j69i60j69i59.3179j0j4&sourceid=chrome&ie=UTF-8">Twitter OpenGraph</a></p>
-            <p><a href="https://developers.facebook.com/docs/sharing/webmasters/">Facebook OpenGraph</a></p>
+            <p><a href="https://no.wikipedia.org/wiki/Scalable_Vector_Graphics">Wikipedia</a></p>
+            <p><a href="https://www.w3schools.com/graphics/svg_intro.asp">W3schools.com</a></p>
         </article>
     </aside>
     <footer>

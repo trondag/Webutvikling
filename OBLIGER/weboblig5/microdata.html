@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styleartikkel.css" />
     <link rel="stylesheet" href="print.css" media="print" />
-    <title>Trond G.. | SEO | Hvordan søkemotoroptimalisere?</title>
-    <meta name="description" content="På denne siden kan du lese mer om 
-            SEO, eller søkemotoroptimalisering som forkortelsen står for." />
+    <title>Trond G.. | Microdata | Web of Data</title>
+    <meta name="description" content="Her kan du lese om microdata, en spennende teknologi som blir mer og mer brukt!" />
     <meta name="theme-color" content="#07575B" />
     <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
     <script src="meny.js"></script>
@@ -37,29 +36,193 @@
         <a href="wptest.html">Test av Wordpress</a>
         <a href="cms.html">CMS systemer</a>
         <a href="seo.html">Søkemotoroptimalisering</a>
+        <a href="some.html">Implementering av sosiale medier</a>
+        <a href="svg.html">SVG-filer</a>
     </nav>
     <nav aria-label="Breadcrumb" class="breadcrumb">
         <ul>
             <li><a href="index.html">Hjem</a></li>
-            <li><a href="cms.html">CMS systemer</a></li>
+            <li><a href="microdata.html">Microdata</a></li>
         </ul>
     </nav>
     <main id="content">
         <article>
             <header><h2>Microdata</h2></header>
             <nav>
-                <a href="#sitemap">1.1 Sitemap</a>
+                <a href="#web">1.1 Web of Data</a>
+                <a href="#aria">1.2 WAI-ARIA</a>
+                <a href="#testing">1.3 Testing</a>
             </nav>
-            <h3 id="sitemap">1.1 Sitemap</h3>
+            <h3 id="web">1.1 Web of Data</h3>
             <p>
-                Microdata er en ny måte å gi data til søkemotorer. Nå kan man merke opp 
-                innhold med spesielle attributter for å gi dem enda mer semantisk verdi.
+                Microdata er en måte å gi html-tagger enda mer semantisk verdi utover den allerede semantiske verdien vi 
+                gir med article- og aside-tagger. Microdata er veldig nyttig for søkemotorer, da de nå kan vise informasjone på en helt annen måte. 
+                I stedet for at de bare har linker til websider, kan de nå vise data frem i søkeresultatene. For eksempel, så kan du hende du søker på en 
+                oppskrift, og da kan det hende at oppskriften popper opp til høyre på siden. Dette skyldes at Google, Bing eller andre har sett på 
+                attributtene til elementer som gir mer semantisk verdi.
+            </p>
+            <p>
+                Mange tror at vi beveger oss bort fra "Web of documents", og heller er på vei inn mot "Web of Data". Det som menes med det er at 
+                informasjonen ikke lengre ligger tilgjengelig som websider, men heller bare data som søkemotorer og andre programmer vil presentere
+                for oss. Internett vil derfor kanskje etterhvert bli en eneste stor database, tror noen. Dette kalles også strukturell data, og det hjelper 
+                oss med bedre SEO, universell utforming, maskinlesbarhet og mye annet.
+            </p>
+            <p>Det finnes flere markup måter for dette:</p>
+            <ul>
+                <li>RDFa (Kanskje den enkleste, den markeres direkte i HTMLkoden.)</li>
+                <li>Microdata (WHATWG og W3C standard, markeres også direkte i HTMLkoden.)</li>
+                <li>JSON-LD (Baserer seg på JSON data)</li>
+            </ul>
+            <p>
+                Informasjon om denne markupen finnes på <a href="https://schema.org/docs/gs.html#microdata_itemscope_itemtype">schema.org</a>. Der 
+                kan vi sjekke hvordan vi skriver markup for akuratt det vi skal legge til microdata på, for eksempel filmer eller oppskrifter.
+            </p>
+            <h3 id="aria">1.2 WAI-ARIA</h3>
+            <p>
+                WAI-ARIA står for Web Accessability Intiative - Accesible Rich Internet Applications, men de fleste sier bare aria. Formålet med dette,
+                er å gjøre internett enda mer tilgjengelig for alle. Dette har altså mye med universell utforming å gjøre, da dette kan hjelpe skjermlesere
+                og mye annen programvare. Dette hjelper også søkemotorer med å vite enda bedre hva innholdet er til. Men skjermlesere vil ha mest nytte av dette.
+            </p>
+            <p>
+                Akuratt som microdata kan man markere opp innhold for å gi det enda mer semantisk betydning, men aria kommer mest til nytte med å forklare en del av
+                funksjonaliteten på websider. Man kan for eksempel markere et søkefelt, eller markere radioknapper slik at de får en større og bedre semantisk betydning.
+                Ved javascript manipulering ser jeg også for meg at aria vil være veldig nyttig, da maskiner ikke forstår dette like enkelt som mennesker. Aria er også veldig nyttig
+                hvis vi skal markere et div-element. Det er derimot ikke noe poeng i å markere allerede semantiske tagger som article og aside med dette!
+            </p>
+            <h3 id="testing">1.3 Testing</h3>
+            <h4>Test 1: filmer</h4>
+            <p>
+                På den første siden har jeg prøvd et vokabular for filmer. Har her brukt microdata.
+                <a href="microdatatest1.html">Test 1: filmer</a>
+            </p>
+            <code>
+                &lt;section itemscope itemtype=&quot;http://schema.org/Movie&quot;&gt;<br />
+                &lt;h3 itemprop=&quot;name&quot;&gt;Django Unchained&lt;/h3&gt; <br/>
+                &lt;p itemprop=&quot;director&quot; itemscope itemtype=&quot;http://schema.org/Person&quot;&gt;<br />
+                Regiss&oslash;r: &lt;span  itemprop=&quot;name&quot;&gt;Quentin Tarantino&lt;/span&gt; f&oslash;dt: &lt;span itemprop=&quot;birthDate&quot;&gt;March 27, 1963&lt;/span&gt;<br />
+                &lt;/p&gt;<br />
+                &lt;p itemprop=&quot;genre&quot;&gt;Western&lt;/p&gt;<br />
+                &lt;p itemprop=&quot;dateCreated&quot;&gt;December 11, 2012&lt;/p&gt;<br />
+                &lt;figure&gt;<br />
+                    &lt;img itemprop=&quot;image&quot; src=&quot;bildeURL&quot; /&gt;<br />
+                &lt;/figure&gt;<br />
+                &lt;/section&gt;<br />
+            </code>
+            <figure>
+                <img src="bilder/microdata1.png" alt="Bilde av microdata i Google" />
+                <figcaption>Slik ville det sett ut i Google, gøy!</figcaption>
+            </figure>
+            <h4>Test 2: Personer</h4>
+            <p>
+                Her prøver jeg å bruke vokabular for personer, og nå har jeg testa RDFa markup. <a href="microdatatest2.html">Test 2: personer</a>
+            </p>
+            <code>
+                &lt;section vocab=&quot;http://schema.org/&quot; typeof=&quot;Person&quot;&gt;<br />
+                &lt;h3 property=&quot;name&quot;&gt;Jens Stoltenberg&lt;/h3&gt;<br />
+                &lt;figure&gt;<br />
+                    &lt;img property=&quot;image&quot; alt=&quot;Bilde av Jens Stoltenberg&quot; src=&quot;Bilde URL&quot; /&gt;<br />
+                &lt;/figure&gt;<br />
+                &lt;p&gt;<br />
+                    Yrke: &lt;span property=&quot;jobTitle&quot;&gt;Generalsekret&aelig;r i NATO&lt;/span&gt;&lt;br/&gt;<br />
+                    F&oslash;dselsdato: &lt;span property=&quot;birthDate&quot;&gt;16.mars 1959&lt;/span&gt;<br />
+                &lt;/p&gt;<br />
+                &lt;/section&gt;<br />
+            </code>
+            <figure>
+                <a href="bilder/microdata2.png">
+                    <img src="bilder/microdata2.png" alt="Skjermdump av testverktøyet til Google" />
+                </a>
+                <figcaption>Google er hvertfall fornøyd, fikk ikke muligheten til forhåndsvisning her da. :(</figcaption>
+            </figure>
+            <h4>Test 3: Konsert</h4>
+            <p>
+                Her tester jeg ut vokabular for konserter. Bruker fortsatt RDFa. Det var litt vanskelig
+                å få til adresser, men det gikk merkelig nok da jeg la adressen som content i 
+                metadata i stedet for faktisk skrift... <a href="microdatatest3.html">Test 3: konsert</a>
+            </p>
+            <code>
+                &lt;section vocab=&quot;http://schema.org/&quot; typeof=&quot;MusicEvent&quot;&gt;<br />
+                &lt;p property=&quot;startDate&quot;&gt;June 1. 2019&lt;/p&gt;<br />
+                &lt;h3 property=&quot;name&quot;&gt;Backstreets back!&lt;/h3&gt;<br />
+                &lt;p property=&quot;description&quot;&gt;Backstreet er tilbake for &aring; holde kosert i Oslo Spektrum!&lt;/p&gt;<br />
+                &lt;img property=&quot;image&quot; src=&quot;Bilde URL /&gt;<br />
+                &lt;div class=&quot;artist&quot; property=&quot;performer&quot; typeof=&quot;MusicGroup&quot;&gt;<br />
+                    &lt;p property=&quot;name&quot;&gt;Backstreet Boys&lt;/p&gt;<br />
+                    &lt;p property=&quot;genre&quot;&gt;Rock&lt;/p&gt;<br />
+                &lt;/div&gt;<br />
+                &lt;div property=&quot;location&quot; typeof=&quot;MusicVenue&quot;&gt;<br />
+                    &lt;meta property=&quot;name&quot; content=&quot;Oslo Spektrum&quot;/&gt;<br />
+                    &lt;link property=&quot;sameAs&quot; href=&quot;bilde URL&quot;/&gt;<br />
+                    &lt;meta property=&quot;address&quot; content=&quot;Sonja Henies plass 2, Oslo, Norge&quot;/&gt;<br />
+                &lt;/div&gt;<br />
+                &lt;/section&gt;<br />
+            </code>
+            <figure>
+                <img src="bilder/microdata3.png" alt="Skjermdump av forhåndsvisning av konsert info (microdata)" />
+                <figcaption>Og slik ville det sett ut.</figcaption>
+            </figure>
+            <figure>
+                <img src="bilder/microdata4.png" alt="Skjermdump av at et menneske kan være
+                i live, død, udød(zombie) eller fictional" />
+                <figcaption>Schema.org har tenkt på alt</figcaption>
+            </figure>
+            <h4>Test 4: Bøker</h4>
+            <p>
+                Denne testen er bøker, fikk desverre ikke noen forhåndsvisning av
+                Google på denne. <a href="microdatatest4.html">Test 4: Bøker</a>
+            </p>
+            <code>
+                &lt;section vocab=&quot;http://schema.org&quot; typeof=&quot;Book&quot;&gt;<br />
+                &lt;h3 property=&quot;name&quot;&gt;Harry Potter og de vises stein&lt;/h3&gt;<br />
+                &lt;p property=&quot;author&quot; typeof=&quot;person&quot;&gt;<br />
+                    &lt;p property=&quot;name&quot;&gt;J.K.Rowling&lt;/p&gt;<br />
+                &lt;/p&gt;<br />
+                &lt;p property=&quot;genre&quot;&gt;Eventyr&lt;/p&gt;<br />
+                &lt;p property=&quot;publisher&quot;&gt;Cappelen Damm&lt;/p&gt;<br />
+                &lt;figure&gt;<br />
+                    &lt;img property=&quot;image&quot; alt=&quot;Bokomslag av Harry Potter&quot; src=&quot;bilde URL /&gt;<br />
+                &lt;/figure&gt;<br />
+                &lt;/section&gt;<br />
+            </code>
+            <figure>
+                <a href="bilder/microdata5.png">
+                    <img src="bilder/microdata5.png" alt="Bilde av resulatat etter strukturert data verktøyet til Google." />
+                </a>
+            </figure>
+            <h4>Test 5: Biler</h4>
+            <p>
+                Til slutt tester jeg biler, denne var kanskje den enkleste å få til.
+                Det kom ikke opp forslag om forhåndsvisning da. Men her er det muligheter 
+                for å fylle ut alt mulig info om bilen, det kunne jo vært noe å tenke på
+                for bilselgere. <a href="microdatatest5.html">Test 5: Biler</a>
+            </p>
+            <code>
+                &lt;section vocab=&quot;http://schema.org&quot; typeof=&quot;Car&quot;&gt;<br />
+                &lt;h3 property=&quot;name&quot;&gt;Hyundai&lt;/h3&gt;<br />
+                &lt;p property=&quot;model&quot;&gt;i30&lt;/p&gt;<br />
+                &lt;p property=&quot;speed&quot;&gt;200 km/h&lt;/p&gt;<br />
+                &lt;p property=&quot;weightTotal&quot;&gt;5000 kg&lt;/p&gt;<br />
+                &lt;/section&gt;<br />
+            </code>
+            <figure>
+                <a href="bilder/microdata6.png">
+                    <img src="bilder/microdata6.png" alt="Bilde av resultat etter strukturert data" />
+                </a>
+            </figure>
         </article>
     </main>
     <aside>
         <article>
             <h2>Lenker:</h2>
-            <p><a href="https://www.xml-sitemaps.com/">Gratis sitemap (XML)</a></p>
+            <p><a href="https://schema.org/">schema.org</a></p>
+        </article>
+        <article>
+            <h2>Testsider:</h2>
+            <p><a href="microdatatest1.html">Test 1: Filmer</a></p>
+            <p><a href="microdatatest2.html">Test 2: Personer</a></p>
+            <p><a href="microdatatest3.html">Test 3: Konsert</a></p>
+            <p><a href="microdatatest4.html">Test 4: Bøker</a></p>
+            <p><a href="microdatatest5.html">Test 5: Biler</a></p>
         </article>
     </aside>
     <footer>

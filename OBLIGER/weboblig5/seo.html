@@ -50,12 +50,14 @@
         <a href="wordpress.html">Inst. av Wordpress</a>
         <a href="wptest.html">Test av Wordpress</a>
         <a href="cms.html">CMS systemer</a>
-        <a href="seo.html">Søkemotoroptimalisering</a>
+        <a href="microdata.html">Microdata</a>
+        <a href="some.html">Implementering av sosiale medier</a>
+        <a href="svg.html">SVG-filer</a>
     </nav>
     <nav aria-label="Breadcrumb" class="breadcrumb">
         <ul>
             <li><a href="index.html">Hjem</a></li>
-            <li><a href="cms.html">CMS systemer</a></li>
+            <li><a href="seo.html">Søkemotoroptimalisering</a></li>
         </ul>
     </nav>
     <main id="content">
@@ -66,6 +68,7 @@
                 <a href="#keywords">1.2 Keywords</a>
                 <a href="#navigasjon">1.3 Navigasjon</a>
                 <a href="#lighthouse">1.4 Google Lighthouse</a>
+                <a href="#suicidal">1.5 "Suicical links"</a>
             </nav>
             <p>
                 Hvis du har et mål om å være synlig på nettet, at folk skal besøke siden din, så må du tenke på SEO.
@@ -82,20 +85,26 @@
                 personlig innhold. Jeg prøver å lage en sånn for nettstedet mitt også:
             </p>
             <figure>
-                <a href="bilder/sitemap.png"><img src="bilder/sitemap.png" alt="Skjermdump av en nettside som lager sitemap" /></a>
+                <a href="bilder/sitemap.png">
+                    <img src="bilder/sitemap.png" alt="Skjermdump av en nettside som lager sitemap" />
+                </a>
                 <figcaption>
                     Slik kan man enkelt lage en sitemap. Gå inn på <a href="https://www.xml-sitemaps.com/">XML-sitemaps</a>, der
                     kan man enkelt lage en sitemap. Det er bare å skrive inn URL'en.
                 </figcaption>
             </figure>
             <figure>
-                <img src="bilder/robots.png" alt="Bilde av nettstedkartet" />
+                <a href="bilder/robots.png">
+                    <img src="bilder/robots.png" alt="Bilde av nettstedkartet" />
+                </a>
                 <figcaption>
                     Slik ser fila ut, xml med oversikt over alle nettsidene.
                 </figcaption>
             </figure>
             <figure>
-                <img src="bilder/plassering.png" alt="SKjermdump av hvor vi legger fila" />
+                <a href="bilder/plassering.png">
+                    <img src="bilder/plassering.png" alt="SKjermdump av hvor vi legger fila" />
+                </a>
                 <figcaption>
                     Legg den inn i mappa med nettstedet
                 </figcaption>
@@ -105,19 +114,25 @@
                 search Console</a>.
             </p>
             <figure>
-                <img src="bilder/eierskap.png" alt="Bilde som viser at vi må bekrefte at vi eier nettsiden vi prøver å få indeksert" />
+                <a href="bilder/eierskap.png">
+                    <img src="bilder/eierskap.png" alt="Bilde som viser at vi må bekrefte at vi eier nettsiden vi prøver å få indeksert" />
+                </a>    
                 <figcaption>
                     Her må jeg bekrefte at jeg eier siden ved å legge noe kode inn i HTML'en min.
                 </figcaption>
             </figure>
             <figure>
-                <img src="bilder/eierskap2.png" alt="Bilde som viser bekreftet eierskap til nettstedet." />
+                <a href="bilder/eierskap2.png">
+                    <img src="bilder/eierskap2.png" alt="Bilde som viser bekreftet eierskap til nettstedet." />
+                </a>
                 <figcaption>
                     Bekreftet!
                 </figcaption>
             </figure>
             <figure>
-                <img src="bilder/nettstedkart.png" alt="Her legger vi inn nettstedkartet vårt!(skjermdump)" />
+                <a href="bilder/nettstedkart.png">
+                    <img src="bilder/nettstedkart.png" alt="Her legger vi inn nettstedkartet vårt!(skjermdump)" />
+                </a>
                 <figcaption>
                     Slik legges sitemapen inn på siden så den kan bli indeksert av Google.
                 </figcaption>
@@ -169,13 +184,17 @@
                 best practise m.m
             </p>
             <figure>
-                <img src="bilder/audits.png" alt="skjermdump av audits-siden." />
+                <a href="bilder/audits.png">
+                    <img src="bilder/audits.png" alt="skjermdump av audits-siden." />
+                </a>
                 <figcaption>
                     Slik ser audits-siden ut!
                 </figcaption>
             </figure>
             <figure>
-                <img src="bilder/resultat.png" alt="skjermdump av resultatet av lighthouse-målingen" />
+                <a href="bilder/resultat.png">
+                    <img src="bilder/resultat.png" alt="skjermdump av resultatet av lighthouse-målingen" />
+                </a>
                 <figcaption>
                     Resultatet ser slik ut. Score på de forskjellige tingene står øverst, og under kommer det frem en liste
                     med en rekke ting jeg kan forbedre.
@@ -186,7 +205,9 @@
                 å legge til farge i en meta description.
             </p>
             <figure>
-                <img src="bilder/feil.png" alt="skjermdump av en feil, som jeg kan rette opp." />
+                <a href="bilder/feil.png">
+                    <img src="bilder/feil.png" alt="skjermdump av en feil, som jeg kan rette opp." />
+                </a>
                 <figcaption>
                     Her er en av mine feil, noen av disse kan fikses enkelt, som den over.
                 </figcaption>
@@ -196,6 +217,12 @@
             </code>
             <p>
                 En annen feil var at jeg brukte tabindex høyere enn 0, det fikset jeg også kjapt.
+            </p>
+            <h3 id="suicidal">"Suicidale linker"</h3>
+            <p>
+                En ting som søkemotorer kan straffe deg for, er å ha linker til den websiden du faktisk er på. Dette kalles "suicidal links" på 
+                engelsk, og jeg gidder ikke å oversette det. Det er fort gjort å ha disse linkene i websteder, spesielt menyen som man 
+                gjerne kopierer og limer inn får gjerne med seg de samme linkene. Jeg har selv slike linker, som jeg nå skal fjerne.
             </p>
         </article>
     </main>
