@@ -1,0 +1,20 @@
+/*For å legge liste-elementene ved siden av hverandre*/
+nav ul li {
+    display: inline-block;
+    list-style: none;
+}
+
+nav ul a {
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+/*Husker ikke helt hvordan jeg skriver denne*/
+@media (min-width: 500px) {
+
+    /* Planen her er å gjøre main til flex-container, slik at article og figure kan legges "på linje" og ikke "nedover" */
+    main {
+        display: flex;
+        flex-direction: row;
+    }
+}

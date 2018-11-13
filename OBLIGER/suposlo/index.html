@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Her finner du en oversikt over de hotteste konsertene og festivalene som spilles i Oslo fremover!" />
+    <meta name="description" content="Her på SUP OSLO finner du en oversikt over de hotteste konsertene og festivalene som spilles/arrangeres i Oslo fremover!" />
     <meta name="theme-color" content="#47DBAF" />
     <link rel="SHORTCUT ICON"
        href="bilder/ikoner/alternative.png">
@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://itstud.hiof.no/~trondg/web/obligx/" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="SUP OSLO..? | Konsertnyheter" />
-    <meta property="og:description" content="Her finner du en oversikt over de hotteste konsertene og festivalene som spilles i Oslo fremover!" />
+    <meta property="og:description" content="Her på SUP OSLO finner du en oversikt over de hotteste konsertene og festivalene som spilles/arrangeres i Oslo fremover!" />
     <meta property="og:image" content="https://itstud.hiof.no/~trondg/web/obligx/bilder/somelogo.jpg" />
     <!--OpenGraph meta tags (Twitter)-->
     <meta name="twitter:card" content="summary_large_image" />
@@ -21,7 +21,7 @@
     <meta name="twitter:creater" content="@TrondGraabrk" />
     <meta property="og:url" content="https://itstud.hiof.no/~trondg/web/obligx/" />
     <meta property="og:title" content="SUP OSLO..? | Konsertnyheter" />
-    <meta property="og:description" content="Her finner du en oversikt over de hotteste konsertene og festivalene som spilles i Oslo fremover!" />
+    <meta property="og:description" content="Her på SUP OSLO finner du en oversikt over de hotteste konsertene og festivalene som spilles/arrangeres i Oslo fremover!" />
     <meta property="og:image" content="https://itstud.hiof.no/~trondg/web/obligx/bilder/somelogo.jpg" />
     <link rel="stylesheet" type="text/css" media="screen" href="stil.css" />
     <link href="https://fonts.googleapis.com/css?family=Fugaz+One|Luckiest+Guy|Mali|Monoton|Notable" rel="stylesheet">
@@ -34,8 +34,10 @@
             function oppstart(){
                 //Lager en forespørsel variabel
                 var request = new XMLHttpRequest();
+
+                //https://app.ticketmaster.com/discovery/v2/events.json?apikey=sIhCKgpPqRFAsAzAzsWtjaOoC9rMJAeC&city=oslo&classificationName=Music&size=30
                 
-                request.open('GET', 'https://app.ticketmaster.com/discovery/v2/events.json?apikey=sIhCKgpPqRFAsAzAzsWtjaOoC9rMJAeC&city=oslo&classificationName=Music&size=30', true);
+                request.open('GET', 'hentedata.php', true);
                 
                 request.onload = function () {
                     
@@ -231,8 +233,8 @@
     </nav>
     <nav id="menyElementer" class="skjultMeny" aria-controlledby="menyKnapp" aria-hidden="true">
         <p><a href="http://itstud.hiof.no/~trondg/studiewebsted/">Trond</a></p>
-        <p><a href="http://itstud.hiof.no/~trondg/web/weboblig4/">Webutvikling</a></p>
         <p><a href="http://itstud.hiof.no/~trondg/infprog_obliger/">Infprog</a></p>
+        <p><a href="http://itstud.hiof.no/~trondg/web/weboblig5/">Webutvikling</a></p>
     </nav>
     <header>
         <h1>SUP Oslo..?</h1>

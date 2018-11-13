@@ -96,6 +96,7 @@ h1:hover {
 main {
     max-width: 370px;
     margin: 0 auto;
+    border: solid 10px rgba(0, 0, 0, 0);
 }
 
 .eventIkon {
